@@ -6,11 +6,12 @@ char data[6];
 void setup()
 {
     Serial.begin(115200, SERIAL_8N1);
+    Serial.setTimeout(50);
 }
 
 void loop()
 {
-    temp = sin(micros()*1e-6 * 2*PI*50);
+    temp = sin(micros()*1e-6 * 2*PI*10);
 
     strcpy(msg, "");
     dtostrf(temp, 6, 3, msg);
