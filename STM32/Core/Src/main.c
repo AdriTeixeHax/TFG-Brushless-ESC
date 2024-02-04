@@ -91,6 +91,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   float temp = 0;
   char msg[8];
+  char sign = ' ';
 
   /* USER CODE END 2 */
 
@@ -104,7 +105,13 @@ int main(void)
 	temp = sin(HAL_GetTick()*1e-3 * 2*3.14159*50);
 
 	strcpy(msg, "");
-	snprintf(msg, 6, "%.3f", temp);
+
+	if (temp >= 0)
+		sprintf(msg, "%c%.3f", sign, temp);
+	else
+		sprintf(msg, "%.3f", temp); // Sign is already set
+
+	strcat(msg, "\r\n");
 	CDC_Transmit_FS(msg, sizeof(msg));
   }
   /* USER CODE END 3 */
