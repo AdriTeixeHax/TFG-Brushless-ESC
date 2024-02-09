@@ -6,7 +6,7 @@ char data[6];
 void setup()
 {
     Serial.begin(115200, SERIAL_8N1);
-    Serial.setTimeout(50);
+    Serial.setTimeout(10);
 }
 
 void loop()
