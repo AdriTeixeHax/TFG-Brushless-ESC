@@ -692,7 +692,7 @@
   (symbol (lib_id "power:GND") (at 48.26 79.375 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 02c907f4-705b-4492-b3a5-e59bc9e4b4e0)
-    (property "Reference" "#PWR03" (at 48.26 85.725 0)
+    (property "Reference" "#PWR02" (at 48.26 85.725 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 48.26 83.185 0)
@@ -707,9 +707,6 @@
     (pin "1" (uuid ec66f1b0-9f7e-4ed2-9c3d-ff190ac58516))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "#PWR03") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "#PWR02") (unit 1)
         )
@@ -726,7 +723,7 @@
   (symbol (lib_id "Device:R_US") (at 85.09 95.885 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1a0c19d5-afe8-4642-a22b-507a2df709d0)
-    (property "Reference" "R1" (at 85.09 90.805 90)
+    (property "Reference" "R2" (at 85.09 90.805 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100R" (at 85.09 93.345 90)
@@ -742,9 +739,6 @@
     (pin "2" (uuid 0b898a07-7b6e-4f2e-b659-f567d771c78b))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "R1") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "R2") (unit 1)
         )
@@ -778,9 +772,6 @@
     (pin "3" (uuid aed7c611-af71-46b4-b3f2-b303bbed496a))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "Q1") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "Q1") (unit 1)
         )
@@ -819,9 +810,6 @@
     (pin "2" (uuid 09445f3d-ea33-4275-ac37-8a4f3d2e76f3))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "D1") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "D1") (unit 1)
         )
@@ -860,9 +848,6 @@
     (pin "8" (uuid abc20867-f065-460a-8a2a-4464cea5525d))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "U1") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "U1") (unit 1)
         )
@@ -879,7 +864,7 @@
   (symbol (lib_id "power:GND") (at 96.52 100.965 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6262f2bb-7461-4133-a271-844d6af8bdbe)
-    (property "Reference" "#PWR02" (at 96.52 107.315 0)
+    (property "Reference" "#PWR04" (at 96.52 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 104.775 0)
@@ -894,9 +879,6 @@
     (pin "1" (uuid 5c67f959-eb96-4f9a-aa63-381fde093d52))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "#PWR02") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "#PWR04") (unit 1)
         )
@@ -913,7 +895,7 @@
   (symbol (lib_id "Device:R_US") (at 85.09 83.185 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 67c1774a-5ec6-4da7-b346-8da48d7fd0a1)
-    (property "Reference" "R2" (at 85.09 78.105 90)
+    (property "Reference" "R1" (at 85.09 78.105 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "100R" (at 85.09 80.645 90)
@@ -929,9 +911,6 @@
     (pin "2" (uuid bb37768b-9440-4ec3-b62d-bb76a47e4033))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "R2") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "R1") (unit 1)
         )
@@ -948,7 +927,7 @@
   (symbol (lib_id "Device:C") (at 48.26 75.565 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7567ddf5-1403-4c27-a628-df0f72c42134)
-    (property "Reference" "C2" (at 52.07 74.2949 0)
+    (property "Reference" "C1" (at 52.07 74.2949 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10u" (at 52.07 76.8349 0)
@@ -964,9 +943,6 @@
     (pin "2" (uuid f46c179a-cc57-4b7f-9ea9-138493e7750d))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "C2") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "C1") (unit 1)
         )
@@ -1000,9 +976,6 @@
     (pin "3" (uuid 008e15fa-ba91-4c04-96b1-8508337d6f2c))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "Q2") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "Q2") (unit 1)
         )
@@ -1019,7 +992,7 @@
   (symbol (lib_id "power:GND") (at 62.23 100.965 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 824b9a6e-0f2d-4281-804a-d52b9fb6029f)
-    (property "Reference" "#PWR04" (at 62.23 107.315 0)
+    (property "Reference" "#PWR03" (at 62.23 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 62.23 104.775 0)
@@ -1034,9 +1007,6 @@
     (pin "1" (uuid dc62e271-12cd-4c4b-ab13-4702c2f74182))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "#PWR04") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "#PWR03") (unit 1)
         )
@@ -1053,7 +1023,7 @@
   (symbol (lib_id "Device:C_Polarized_US") (at 73.025 88.265 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid db4dbf13-1b1c-4924-9b66-024371851921)
-    (property "Reference" "C1" (at 76.2 86.995 0)
+    (property "Reference" "C2" (at 76.2 86.995 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "2u2" (at 76.2 89.535 0)
@@ -1069,9 +1039,6 @@
     (pin "2" (uuid 8226a5c7-6e58-4df3-9f18-d7b85398d3de))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "C1") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "C2") (unit 1)
         )
@@ -1103,9 +1070,6 @@
     (pin "1" (uuid 78c329ab-116b-4631-90ca-ffbffe3388dc))
     (instances
       (project "RTSpeed"
-        (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-          (reference "#PWR01") (unit 1)
-        )
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
           (reference "#PWR01") (unit 1)
         )
