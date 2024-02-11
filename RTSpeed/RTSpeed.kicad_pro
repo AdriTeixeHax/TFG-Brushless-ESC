@@ -329,15 +329,15 @@
     ],
     [
       "b5458e57-2ddd-4d30-9620-d640c1a391c8",
-      "Half-Bridge"
+      "Half-Bridge-U"
     ],
     [
-      "f8c306d8-017c-4a71-a4b7-a44622ec1e7a",
-      "Half-Bridge1"
+      "f6e668ab-a50d-4861-bee8-58a57ed6fcc7",
+      "Half-Bridge-V"
     ],
     [
-      "53ca7499-9a82-47da-928e-604c2faaf7f7",
-      "Half-Bridge2"
+      "211b6883-96c8-42a2-bec5-a4dfd4e56ba6",
+      "Half-Bridge-W"
     ]
   ],
   "text_variables": {}
