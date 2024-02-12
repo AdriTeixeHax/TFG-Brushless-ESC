@@ -18,7 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "usb_device.h"
+#include "../../USB_DEVICE/App/usb_device.h"
+#include "../../USB_DEVICE/App/usbd_cdc_if.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -46,7 +47,7 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
-
+uint8_t CDCbuffer[64];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,6 +100,8 @@ int main(void)
   char msg[8];
   char sign = ' ';
 
+  strcpy(CDCbuffer, "50.0");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -108,7 +111,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	temp = sin(HAL_GetTick()*1e-3 * 2*3.14159*50);
+	temp = sin(HAL_GetTick()*1e-3 * 2*3.14159*atof(CDCbuffer));
 
 	strcpy(msg, "");
 
