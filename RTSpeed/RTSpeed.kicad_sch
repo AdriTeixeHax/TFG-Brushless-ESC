@@ -2828,8 +2828,8 @@
     (property "Datasheet" "~" (at 101.6 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid de1085b0-5b09-4e91-a50e-e69806a3f3bd))
     (pin "1" (uuid fc5b0f9c-9c2a-4ec6-9d88-92370ed7db1d))
+    (pin "2" (uuid de1085b0-5b09-4e91-a50e-e69806a3f3bd))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -2929,8 +2929,8 @@
     (property "Datasheet" "~" (at 92.71 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 92029693-00b5-4bc4-b38e-6778ceb3bcfd))
     (pin "1" (uuid f7ca7e8c-a91f-42bb-8c1b-e30ab76fd037))
+    (pin "2" (uuid 92029693-00b5-4bc4-b38e-6778ceb3bcfd))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -2955,8 +2955,8 @@
     (property "Datasheet" "~" (at 27.94 28.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 8a17693f-28a8-43de-88e4-cacc42e18525))
     (pin "1" (uuid 5b7f2dfb-e353-428b-bb8a-52222571cab0))
+    (pin "2" (uuid 8a17693f-28a8-43de-88e4-cacc42e18525))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3006,8 +3006,8 @@
     (property "Datasheet" "~" (at 198.755 113.665 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 2a15c0a2-9bc1-4c76-a90c-68b5b26e66d9))
     (pin "1" (uuid 1c711eba-a951-4c63-8693-65cc3a3ce7df))
+    (pin "2" (uuid 2a15c0a2-9bc1-4c76-a90c-68b5b26e66d9))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3032,10 +3032,10 @@
     (property "Datasheet" "~" (at 115.57 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid ded2420e-c41e-4b73-880d-a69681fb97cb))
-    (pin "4" (uuid 44491a9d-f207-4bf8-b6d6-f1356aa16ec1))
     (pin "1" (uuid a2772231-59d2-47bf-ac5f-e3ced8e88c00))
+    (pin "2" (uuid ded2420e-c41e-4b73-880d-a69681fb97cb))
     (pin "3" (uuid 7fb01c2f-510d-43dc-ba46-af7912d254d1))
+    (pin "4" (uuid 44491a9d-f207-4bf8-b6d6-f1356aa16ec1))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3317,8 +3317,8 @@
     (property "Datasheet" "~" (at 34.29 34.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid c15c3a1a-1522-4473-ac78-24066176d1a2))
     (pin "1" (uuid 345e46fb-d7f7-4da9-a4ef-c52350faf6b5))
+    (pin "2" (uuid c15c3a1a-1522-4473-ac78-24066176d1a2))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3468,8 +3468,8 @@
     (property "Datasheet" "~" (at 27.94 60.325 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 0c4497be-7070-4962-8f16-c3df1b4864c0))
     (pin "1" (uuid 28b763bf-a46c-4082-90a5-8895335bd5cb))
+    (pin "2" (uuid 0c4497be-7070-4962-8f16-c3df1b4864c0))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3494,8 +3494,8 @@
     (property "Datasheet" "~" (at 31.75 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 47520521-7508-43f0-8cf8-2cf6f31f2b31))
     (pin "1" (uuid c321df98-b8ab-4c4b-bb12-aabd4e4b3d65))
+    (pin "2" (uuid 47520521-7508-43f0-8cf8-2cf6f31f2b31))
     (pin "3" (uuid e4a31159-7404-4bbf-be0b-ee9b210315de))
     (pin "4" (uuid ba808ff4-5fb2-40a8-bf89-fde4ad05142a))
     (instances
@@ -3572,8 +3572,8 @@
     (property "Datasheet" "~" (at 200.025 34.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 240c7429-0173-4039-8bc6-b4e9bf7f8ba4))
     (pin "1" (uuid 1d90f26d-0912-4754-b63b-4d3d1ca59c4a))
+    (pin "2" (uuid 240c7429-0173-4039-8bc6-b4e9bf7f8ba4))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3851,8 +3851,8 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 18b09642-5fa0-4b0b-8d2d-a3818a5ca1cc))
-    (pin "3" (uuid f13611d0-2f25-49bb-b95f-877287e2d137))
     (pin "2" (uuid 147163c3-1db2-4565-b2b9-45ad186abcfe))
+    (pin "3" (uuid f13611d0-2f25-49bb-b95f-877287e2d137))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -3877,8 +3877,8 @@
     (property "Datasheet" "~" (at 31.75 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 29c7e43b-9cf2-4547-987a-6f6f6214aecc))
     (pin "1" (uuid 97c58175-af32-4ca1-af02-c2103a671dd8))
+    (pin "2" (uuid 29c7e43b-9cf2-4547-987a-6f6f6214aecc))
     (pin "3" (uuid 08811cc5-421b-4c8a-8e79-4416150564fe))
     (pin "4" (uuid 8ca1af44-7a59-4e2c-b99b-613ff8352a17))
     (instances
@@ -3955,8 +3955,8 @@
     (property "Datasheet" "~" (at 186.69 113.665 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 505114c3-1871-4f55-9a6b-d257b4d1f811))
     (pin "1" (uuid 88ad6615-12ba-4ca0-9ff6-412e6ca3d503))
+    (pin "2" (uuid 505114c3-1871-4f55-9a6b-d257b4d1f811))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -4237,23 +4237,23 @@
     (property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" (at 164.465 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "B6" (uuid 3e87ae8e-bb86-4ae4-8e05-89ccf5415327))
-    (pin "B7" (uuid 5ef76b39-61f3-483c-ad39-558fd60b5ea3))
-    (pin "B9" (uuid 62703bb0-b1cc-4dc3-9273-1eb23c64bf7d))
-    (pin "S1" (uuid afadb011-1bb8-4e89-a315-1451fae2cf3f))
-    (pin "B8" (uuid 8d5f5504-a238-4ee9-8d3f-3bbfa6c1de06))
+    (pin "A1" (uuid 844aa6af-e81c-44d6-8de6-df6b28ad9d66))
+    (pin "A12" (uuid 86e5b2dd-a802-41fb-af9e-3151202ae008))
+    (pin "A4" (uuid dadb09d6-bca1-430e-8d18-a44006951e95))
+    (pin "A5" (uuid c50f7e7c-4ba0-433b-bf6a-420635f672b2))
     (pin "A6" (uuid 7011c574-2e2b-4fca-9d17-5031a58503cc))
     (pin "A7" (uuid 9e8e07cc-3616-41a1-a2a0-931db5a5aca9))
     (pin "A8" (uuid 1b9ec62d-f9f8-4902-8915-eae6556915e9))
+    (pin "A9" (uuid 62861808-0a5d-4425-9453-4ebfeb0cd4a8))
     (pin "B1" (uuid 50fb7f23-74a1-44c8-9772-bd03f37835d5))
     (pin "B12" (uuid 67b383a6-ab0b-46e1-860d-328f8424935b))
     (pin "B4" (uuid 70d80d6b-afe7-4fc0-a9bd-8faa1141ddb1))
-    (pin "A4" (uuid dadb09d6-bca1-430e-8d18-a44006951e95))
-    (pin "A5" (uuid c50f7e7c-4ba0-433b-bf6a-420635f672b2))
-    (pin "A12" (uuid 86e5b2dd-a802-41fb-af9e-3151202ae008))
-    (pin "A9" (uuid 62861808-0a5d-4425-9453-4ebfeb0cd4a8))
-    (pin "A1" (uuid 844aa6af-e81c-44d6-8de6-df6b28ad9d66))
     (pin "B5" (uuid e4fc062d-24bb-4ae9-aae8-bacc2c2557d9))
+    (pin "B6" (uuid 3e87ae8e-bb86-4ae4-8e05-89ccf5415327))
+    (pin "B7" (uuid 5ef76b39-61f3-483c-ad39-558fd60b5ea3))
+    (pin "B8" (uuid 8d5f5504-a238-4ee9-8d3f-3bbfa6c1de06))
+    (pin "B9" (uuid 62703bb0-b1cc-4dc3-9273-1eb23c64bf7d))
+    (pin "S1" (uuid afadb011-1bb8-4e89-a315-1451fae2cf3f))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -4304,8 +4304,8 @@
     (property "Datasheet" "~" (at 118.11 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 72592c73-83a9-499a-af05-86e24e8e70a5))
     (pin "1" (uuid c8685a58-a1b3-432b-8695-bad1140baa06))
+    (pin "2" (uuid 72592c73-83a9-499a-af05-86e24e8e70a5))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -4455,8 +4455,8 @@
     (property "Datasheet" "~" (at 163.83 162.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid 826dd98e-5553-4374-972b-f8f1b43a2843))
     (pin "1" (uuid 634ddbdb-2a61-41ba-ad06-7196c4f1ddaa))
+    (pin "2" (uuid 826dd98e-5553-4374-972b-f8f1b43a2843))
     (pin "3" (uuid f52a3f68-c74c-48d6-b8dd-9bbef1f1c848))
     (instances
       (project "RTSpeed"
@@ -4586,9 +4586,9 @@
     (property "Datasheet" "http://www.diodes.com/_files/datasheets/ds11005.pdf" (at 176.403 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid 0207ff57-e426-4927-bf4a-9d71bb056e22))
     (pin "1" (uuid f51f2b33-4892-4c7a-a602-9e0bea8e2a55))
     (pin "2" (uuid 2c99b7d2-8274-461f-8f39-d03f515058d6))
+    (pin "3" (uuid 0207ff57-e426-4927-bf4a-9d71bb056e22))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -4613,8 +4613,8 @@
     (property "Datasheet" "~" (at 34.29 53.975 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid d7bdbfd0-c0c1-4122-ada0-201d71801c4e))
     (pin "1" (uuid d39264b9-b50e-4745-aa1c-230dec6fc299))
+    (pin "2" (uuid d7bdbfd0-c0c1-4122-ada0-201d71801c4e))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
@@ -4844,8 +4844,8 @@
     (property "Datasheet" "~" (at 62.865 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "2" (uuid a1c9b600-3e39-4835-970a-ddbaa5c76379))
     (pin "1" (uuid 9d6892fb-0c65-4213-8307-0e5b26add981))
+    (pin "2" (uuid a1c9b600-3e39-4835-970a-ddbaa5c76379))
     (instances
       (project "RTSpeed"
         (path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"

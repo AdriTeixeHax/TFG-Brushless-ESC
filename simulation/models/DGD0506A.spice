@@ -1,0 +1,228 @@
+* DIODES INCORPORATED AND ITS AFFILIATED COMPANIES AND SUBSIDIARIES (COLLECTIVELY, "DIODES") 
+* PROVIDE THESE SPICE MODELS AND DATA (COLLECTIVELY, THE "SM DATA") "AS IS" AND WITHOUT ANY 
+* REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF MERCHANTABILITY 
+* OR FITNESS FOR A PARTICULAR PURPOSE, ANY WARRANTY ARISING FROM COURSE OF DEALING OR COURSE OF 
+* PERFORMANCE, OR ANY WARRANTY THAT ACCESS TO OR OPERATION OF THE SM DATA WILL BE UNINTERRUPTED, 
+* OR THAT THE SM DATA OR ANY SIMULATION USING THE SM DATA WILL BE ERROR FREE. TO THE MAXIMUM 
+* EXTENT PERMITTED BY LAW, IN NO EVENT WILL DIODES BE LIABLE FOR ANY DIRECT OR INDIRECT, 
+* SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH 
+* THE PRODUCTION OR USE OF SM DATA, HOWEVER CAUSED AND UNDER WHATEVER CAUSE OF ACTION OR THEORY 
+* OF LIABILITY BROUGHT (INCLUDING, WITHOUT LIMITATION, UNDER ANY CONTRACT, NEGLIGENCE OR OTHER 
+* TORT THEORY OF LIABILITY), EVEN IF DIODES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, 
+* AND DIODES' TOTAL LIABILITY (WHETHER IN CONTRACT, TORT OR OTHERWISE) WITH REGARD TO THE SM 
+* DATA WILL NOT, IN THE AGGREGATE, EXCEED ANY SUMS PAID BY YOU TO DIODES FOR THE SM DATA.
+
+
+
+*DATE=27Apr2021
+*VERSION=1.0
+
+* block symbol definitions
+.subckt dgd0506a VCC VB HO VS NC DT EN IN COM LO
+C1 uvvc COM 10p
+S1 COM hinst IN COM SLIN
+C2 hinst COM 0.01p
+D1 COM IN DMOD
+D2 IN VCC DMOD
+R1 IN COM 200k
+R2 bias1 hinst 100k
+S2 COM uvvc N001 COM SUVCC
+S3 COM N002 EN COM SDIN
+C3 hinstb COM 0.01p
+R3 EN COM 200k
+R4 N002 bias1 100k
+D3 COM EN DMOD
+D4 EN VCC DMOD
+C4 cdh COM 50n
+C5 ondlyh COM 10p
+C6 ondlyl COM 10p
+D5 COM N001 DMOD
+R5 N001 COM 400k
+D6 COM VS DMODH
+D7 VS VB DMOD
+C7 dlyoutl COM 10p
+S4 drvlp illp dlyoutl COM SRSTP
+S5 illn drvln dlyoutl COM SRSTN
+R6 drvlp LO 2.25 tol=1
+R7 drvln LO 1.5 tol=1
+C8 LO COM 3.5n
+D8 COM LO DMOD
+D9 LO N001 DMOD
+R8 VB VS 400k
+C9 onh COM 10p
+S6 drvhp ilhp onh COM SRSTP
+S7 ilhn drvhn onh COM SRSTN
+R9 drvhp HO 2.25 tol=1
+R10 drvhn HO 1.5 tol=1
+C10 HO VS 3.5n
+D10 VS HO DMOD
+D11 HO VB DMOD
+R11 uvvc bias1 1k
+S8 COM uvbs VB VS SUVCC
+C11 uvbs COM 10p
+R12 uvbs bias2 1k tol=1
+XX1 cdh offconth offdlyh N001 ideal_comparator
+XX2 onconth cdh ondlyh N001 ideal_comparator
+XX3 cdl offcontl offdlyl N001 ideal_comparator
+XX4 oncontl cdl ondlyl N001 ideal_comparator
+D12 COM VB DMODH
+E1 bias1 COM N001 COM 1
+E2 bias2 COM N001 COM 1
+C12 cdl COM 50n
+XX5 lino uvvc lovc N001 ideal_nand_2
+XX6 uvvc hino hivc N001 ideal_nand_2
+BdlyOff1 offcontl COM V=(V(VCC)-V(VCC)*EXP(-22n/50.5n))
+BdlyOn1 oncontl COM V=V(VCC)*EXP(-33n/50.5n)
+BdlyOff2 offconth COM V=(V(VCC)-V(VCC)*EXP(-22n/50.5n))
+BdlyOn2 onconth COM V=V(VCC)*EXP(-33n/50.5n)
+XX7 lovc cdl N001 ideal_buffercd
+XX8 hivc cdh N001 ideal_buffercd
+XX9 ondlyh dlyouth onhrs N001 nor_2
+XX10 offdlyh onhrs dlyouth N001 nor_2
+XX11 ondlyl dlyoutl onlrs N001 nor_2
+XX12 offdlyl onlrs dlyoutl N001 nor_2
+C13 dlyouth COM 10p
+XX13 uvbs dlyouth onh N001 ideal_and_2
+C14 hdelay COM {Cdelay}
+C15 ldelay COM {Cdelay}
+XX15 hinst hinstb N001 ideal_inverter
+XX17 hdelay hdelayb N001 ideal_inverter
+XX18 hinstb linstb N001 ideal_inverter
+XX19 ldelay ldelayb N001 ideal_inverter
+E3 bias4 VS HO drvhn 1
+R17 bias4 dlyhn 10k
+C16 dlyhn VS 10p
+E4 bias5 VS drvhp HO 1
+R18 bias5 dlyhp 10k
+C17 dlyhp VS 10p
+S9 ilhp VB dlyhp VS SILIMP
+S10 VS ilhn dlyhn VS SILIMN
+E5 bias6 COM LO drvln 1
+R19 bias6 dlyln 10k
+C18 dlyln COM 10p
+E6 bias7 COM drvlp LO 1
+R20 bias7 dlylp 10k
+C19 dlylp COM 10p
+S11 illp N001 dlylp COM SILIMP
+S12 COM illn dlyln COM SILIMN
+S13 COM hdelay hinst COM SDIN
+S14 COM ldelay hinstb COM SDIN
+DDT1 N001 N003 DMOD
+XX14 linstb N002 hdelayb N001 lino ideal_nor_3
+XX16 hinstb N002 ldelayb N001 hino ideal_nor_3
+F1 N001 hdelay V1 0.5
+F2 N001 ldelay V1 0.5
+V1 N003 DT 0
+D13 N001 VB Dboost
+S15 N001 VCC EN COM SDIN
+.MODEL DMOD D(IS=1.0e-14 RS=0.01 N=1 EG=1.11 XTI=3 BV=25 IBV=10u CJO=0 VJ=0.75 M=0.333 FC=0.5 TT=0 KF=0 AF=1)
+.MODEL DMODH D(IS=1.0e-14 RS=0.01 N=1 EG=1.11 XTI=3 BV=60 IBV=5u CJO=0 VJ=0.75 M=0.333 FC=0.5 TT=0 KF=0 AF=1)
+.MODEL SRSTN SW(Ron=10Meg Roff=1m Vt=1.5 Vh=1.2)
+.MODEL SRSTP SW(Ron=1m Roff=10Meg Vt=1.5 Vh=1.2)
+.MODEL SLIN SW(Ron=10Meg Roff=1m Vt=1.5 Vh=0.15)
+.MODEL SUVCC SW(Ron=10Meg Roff=1m Vt=6.8 Vh=0.2)
+.param Cdelay=3.82p T1=-40 T2=25 T3=125 V1=10 V2=15 V3=20 toffT2=22n tonT2=33n
+.MODEL SILIMN SW(Ron=4.5 Roff=1m Vt=3 Vh=0.01)
+.MODEL SILIMP SW(Ron=5.75 Roff=1m Vt=3.375 Vh=0.01)
+.MODEL SDIN SW(Ron=1m Roff=100Meg Vt=1.5 Vh=0.15)
+.MODEL Dboost D(IS=1.5f RS=8.5 CJO=150p M=0.3 VJ=0.75 ISR=1p BV=100 Ibv=5u)
+.ends dgd0506a
+
+.subckt ideal_comparator 1 2 3 VDD
+S3 3 VDD 1 2 switmod
+S4 0 3 2 1 switmod
+.model switmod SW(Ron=1m Roff=10Meg Vt=0 Vh=0.000001)
+.ends ideal_comparator
+
+.subckt ideal_nand_2 A B Y Vdd
+S1 Y Vdd Vtrip A switmod
+S2 N001 Y A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 Y Vdd Vtrip B switmod
+S5 0 N001 B Vtrip switmod
+C1 Y 0 10p
+.model switmod SW(Ron=1m Roff=10Meg Vt=0 Vh=0.000001)
+.ends ideal_nand_2
+
+.subckt ideal_buffercd A Y Vdd
+S3 Y Vdd A N001 switmodcd
+S4 0 Y N001 A switmodcd
+E1 N001 0 Vdd 0 0.5
+C1 Y 0 10p
+.model switmodcd SW(Ron=1 Roff=10Meg Vt=0 Vh=0.00001)
+.ends ideal_buffercd
+
+.subckt nor_2 A B Y Vdd
+M1 Y B N001 Vdd PFET l=1u w=100u
+M2 N001 A Vdd Vdd PFET l=1u w=100u
+M3 Y B 0 0 NFET l=1u w=50u
+M4 Y A 0 0 NFET l=1u w=50u
+.MODEL PFET PMOS (LEVEL=3 TOX=200E-10 NSUB=1E17 GAMMA=0.6 PHI=0.7 VTO=-0.9 DELTA=0.1 UO=250 ETA=0 THETA=0.1
++ KP=40E-6 VMAX=5E4 KAPPA=1 RSH=0 NFS=1E12 TPG=-1 XJ=500E-9 LD=100E-9 CGDO=200E-12 CGSO=200E-12 CGBO=1E-10
++ CJ=400E-6 PB=1 MJ=0.5 CJSW=300E-12 MJSW=0.5)
+.MODEL NFET NMOS (LEVEL=3 TOX=200E-10 NSUB=1E17 GAMMA=0.5 PHI=0.7 VTO=0.8 DELTA=3.0 UO=650 ETA=3.0E-6 THETA =0.1
++ KP=120E-6 VMAX=1E5 KAPPA=0.3 RSH=0 NFS=1E12 TPG=1 XJ=500E-9 LD=100E-9 CGDO=200E-12 CGSO=200E-12 CGBO=1E-10
++ CJ=400E-6 PB=1 MJ= 0.5 CJSW=300E-12 MJSW=0.5)
+.ends nor_2
+
+.subckt ideal_and_2 A B Y Vdd
+S1 N001 Vdd Vtrip A switmod
+S2 N002 N001 A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 N001 Vdd Vtrip B switmod
+S5 0 N002 B Vtrip switmod
+S4 Y Vdd Vtrip N001 switmod
+S6 0 Y N001 Vtrip switmod
+C1 N001 0 10p
+C2 Y 0 10p
+.model switmod SW(Ron=1m Roff=10Meg Vt=0 Vh=0.000001)
+.ends ideal_and_2
+
+.subckt ideal_inverter A Y Vdd
+S3 Y Vdd N001 A switmod
+S4 0 Y A N001 switmod
+E1 N001 0 Vdd 0 0.5
+C1 Y 0 10p
+.model switmod SW(Ron=1m Roff=10Meg Vt=0 Vh=0.00001)
+.ends ideal_inverter
+
+.subckt ideal_nor_3 A B C Vdd Y
+S1 Y N002 Vtrip A switmod
+S2 0 Y A Vtrip switmod
+E1 Vtrip 0 Vdd 0 0.5
+S3 N002 N001 Vtrip B switmod
+S5 0 Y B Vtrip switmod
+C1 Y 0 10p
+S4 N001 Vdd Vtrip C switmod
+S6 0 Y C Vtrip switmod
+.model switmod SW(Ron=1m Roff=10Meg Vt=0 Vh=0.00001)
+.ends ideal_nor_3
+
+
+******************************************************************************
+*                	 (c)  2022 Diodes Inc
+*
+*   Diodes Incorporated and its affiliated companies and subsidiaries 
+*   (collectively, "Diodes") provide these spice models and data 
+*   (collectively, the "SM data") "as is" and without any representations
+*   or warranties, express or implied, including any warranty of
+*   merchantability or fitness for a particular purpose, any warranty 
+*   arising from course of dealing or course of performance, or any 
+*   warranty that access to or operation of the SM data will be
+*   uninterrupted, or that the SM data or any simulation using the SM data
+*   will be error free.
+*
+*   To the maximum extent permitted by law, in no event will Diodes be
+*   liable for any indirect, special, incidental, punitive or consequential
+*   damages arising out of or in connection with the production or use of
+*   SM data, however caused and under whatever cause of action or theory of
+*   liability brought (including, without limitation, under any contract,
+*   negligence or other tort theory of liability), even if Diodes has been
+*   advised of the possibility of such damages, and Diodes' total liability
+*   (whether in contract, tort or otherwise) with regard to the SM data
+*   will not, in the aggregate, exceed any sums paid by you to Diodes for
+*   the SM data
+*
+*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
+*   Oldham, United Kingdom, OL9 9LL
+******************************************************************************
