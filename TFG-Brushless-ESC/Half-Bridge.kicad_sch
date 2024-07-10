@@ -1159,11 +1159,11 @@
 				)
 			)
 		)
-		(symbol "power:+48V"
+		(symbol "power:+12V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1176,7 +1176,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+48V"
+			(property "Value" "+12V"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -1202,7 +1202,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+48V\""
+			(property "Description" "Power symbol creates a global label with name \"+12V\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1220,7 +1220,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+48V_0_1"
+			(symbol "+12V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -1258,11 +1258,11 @@
 					)
 				)
 			)
-			(symbol "+48V_1_1"
+			(symbol "+12V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+48V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1279,11 +1279,11 @@
 				)
 			)
 		)
-		(symbol "power:+5V"
+		(symbol "power:+24V"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1296,7 +1296,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+5V"
+			(property "Value" "+24V"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -1322,7 +1322,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(property "Description" "Power symbol creates a global label with name \"+24V\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1340,7 +1340,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+5V_0_1"
+			(symbol "+24V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -1378,11 +1378,11 @@
 					)
 				)
 			)
-			(symbol "+5V_1_1"
+			(symbol "+24V_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+5V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1835,7 +1835,7 @@
 			(uuid "ec66f1b0-9f7e-4ed2-9c3d-ff190ac58516")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR042")
 					(unit 1)
@@ -1930,7 +1930,7 @@
 			(uuid "ed5d43b0-38e6-4350-83bc-bc55dd387ade")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "C22")
 					(unit 1)
@@ -2005,7 +2005,7 @@
 			(uuid "0b898a07-7b6e-4f2e-b659-f567d771c78b")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "R17")
 					(unit 1)
@@ -2016,6 +2016,80 @@
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+24V")
+		(at 96.52 78.105 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33a6fec9-e8b2-4869-ac06-8644dc96bbcb")
+		(property "Reference" "#PWR041"
+			(at 96.52 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+24V"
+			(at 96.52 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+24V\""
+			(at 96.52 78.105 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98c40d22-5c58-4c0b-ba53-53ba075083f3")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "#PWR041")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "#PWR046")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -2039,7 +2113,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF1310"
+		(property "Value" "TK58E06N1"
 			(at 99.695 84.455 0)
 			(effects
 				(font
@@ -2086,6 +2160,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Rds" "   0.036R"
@@ -2096,6 +2171,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "VDSmax" "100V"
@@ -2106,6 +2182,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "IDmax" " 42A @ 20ºC"
@@ -2116,6 +2193,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Sim.Library" "D:\\dev\\RTSpeed\\simulation\\models\\irf1310ns.spi"
@@ -2164,7 +2242,7 @@
 			(uuid "aed7c611-af71-46b4-b3f2-b303bbed496a")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "Q5")
 					(unit 1)
@@ -2278,7 +2356,7 @@
 			(uuid "09445f3d-ea33-4275-ac37-8a4f3d2e76f3")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "D6")
 					(unit 1)
@@ -2351,7 +2429,7 @@
 			(uuid "913ee4e4-de14-4adc-a6d7-881f07058d21")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR055")
 					(unit 1)
@@ -2483,7 +2561,7 @@
 			(uuid "abc20867-f065-460a-8a2a-4464cea5525d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "U5")
 					(unit 1)
@@ -2556,7 +2634,7 @@
 			(uuid "5c67f959-eb96-4f9a-aa63-381fde093d52")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR044")
 					(unit 1)
@@ -2649,7 +2727,7 @@
 			(uuid "bb37768b-9440-4ec3-b62d-bb76a47e4033")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "R16")
 					(unit 1)
@@ -2727,7 +2805,7 @@
 			(uuid "f46c179a-cc57-4b7f-9ea9-138493e7750d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "C20")
 					(unit 1)
@@ -2761,7 +2839,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRF1310"
+		(property "Value" "TK58E06N1"
 			(at 99.695 97.1549 0)
 			(effects
 				(font
@@ -2846,7 +2924,7 @@
 			(uuid "008e15fa-ba91-4c04-96b1-8508337d6f2c")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "Q6")
 					(unit 1)
@@ -2919,7 +2997,7 @@
 			(uuid "dc62e271-12cd-4c4b-ab13-4702c2f74182")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR043")
 					(unit 1)
@@ -2930,79 +3008,6 @@
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "#PWR053")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+48V")
-		(at 96.52 78.105 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b4b46ec1-f03d-485c-879c-9da23752f9f2")
-		(property "Reference" "#PWR041"
-			(at 96.52 81.915 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+48V"
-			(at 96.52 74.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 78.105 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 78.105 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 78.105 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2bbcdec0-0daf-4a80-98b3-bc3de3dc0c75")
-		)
-		(instances
-			(project "RTSpeed"
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
-					(reference "#PWR041")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
-					(reference "#PWR046")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -3026,7 +3031,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2.2u"
+		(property "Value" "47u"
 			(at 76.2 89.535 0)
 			(effects
 				(font
@@ -3087,7 +3092,7 @@
 			(uuid "8226a5c7-6e58-4df3-9f18-d7b85398d3de")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
 					(reference "C21")
 					(unit 1)
@@ -3104,14 +3109,15 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
+		(lib_id "power:+12V")
 		(at 73.025 69.215 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f282a8d6-120b-4e87-b84d-78e0757b4279")
+		(fields_autoplaced yes)
+		(uuid "fa2f1d07-2c83-4f3b-8129-bc6409efe55f")
 		(property "Reference" "#PWR040"
 			(at 73.025 73.025 0)
 			(effects
@@ -3121,8 +3127,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 73.025 65.405 0)
+		(property "Value" "+12V"
+			(at 73.025 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3147,7 +3153,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
 			(at 73.025 69.215 0)
 			(effects
 				(font
@@ -3157,10 +3163,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "ac296048-35cf-47c3-8bf4-416f63d737cf")
+			(uuid "f80d1f86-8fa1-4641-981f-08453aaf1654")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR040")
 					(unit 1)

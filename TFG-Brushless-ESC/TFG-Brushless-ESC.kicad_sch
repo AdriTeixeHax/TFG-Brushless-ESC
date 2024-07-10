@@ -7334,7 +7334,7 @@
 			(uuid "de1085b0-5b09-4e91-a50e-e69806a3f3bd")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R1")
 					(unit 1)
@@ -7400,7 +7400,7 @@
 			(uuid "4a54e4dc-3e5b-4396-a368-a933e75593e0")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR021")
 					(unit 1)
@@ -7465,7 +7465,7 @@
 			(uuid "7271a5ec-e591-4b78-8b0c-9c566db50da4")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR038")
 					(unit 1)
@@ -7531,7 +7531,7 @@
 			(uuid "7e428b46-38fa-461e-a4fa-1d3464e5754a")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR023")
 					(unit 1)
@@ -7601,7 +7601,7 @@
 			(uuid "92029693-00b5-4bc4-b38e-6778ceb3bcfd")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R3")
 					(unit 1)
@@ -7668,7 +7668,7 @@
 			(uuid "8a17693f-28a8-43de-88e4-cacc42e18525")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "SW1")
 					(unit 1)
@@ -7733,7 +7733,7 @@
 			(uuid "6b91abcb-386c-42a4-afd5-8275a144d26a")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR024")
 					(unit 1)
@@ -7802,7 +7802,7 @@
 			(uuid "2a15c0a2-9bc1-4c76-a90c-68b5b26e66d9")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R11")
 					(unit 1)
@@ -7877,7 +7877,7 @@
 			(uuid "44491a9d-f207-4bf8-b6d6-f1356aa16ec1")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "J3")
 					(unit 1)
@@ -7946,7 +7946,7 @@
 			(uuid "89c5907a-96a3-47d3-9315-0cb81bc112a9")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C1")
 					(unit 1)
@@ -8024,7 +8024,7 @@
 			(uuid "13c8801d-aba4-4c27-a1e4-5c9ab9718529")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "D3")
 					(unit 1)
@@ -8089,7 +8089,7 @@
 			(uuid "3867b1e8-654b-43b4-8436-80b070b4a5f4")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR029")
 					(unit 1)
@@ -8154,7 +8154,7 @@
 			(uuid "598e65ef-b041-4066-9815-0d873fe62a6c")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR016")
 					(unit 1)
@@ -8219,7 +8219,7 @@
 			(uuid "254425da-8996-4bb9-b2ab-caf7516759d1")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR030")
 					(unit 1)
@@ -8284,7 +8284,7 @@
 			(uuid "bb632efa-2fb2-4c2e-97ed-88f0117717f6")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR03")
 					(unit 1)
@@ -8351,7 +8351,7 @@
 			(uuid "ed5d1884-25a1-434f-a79f-bc6ac353d4bd")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R5")
 					(unit 1)
@@ -8416,7 +8416,7 @@
 			(uuid "0702ac49-e681-4c7c-9883-099be13e0863")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR039")
 					(unit 1)
@@ -8486,7 +8486,7 @@
 			(uuid "e50a9b62-bdb8-4ff2-936c-5f2208fcb240")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C9")
 					(unit 1)
@@ -8551,7 +8551,7 @@
 			(uuid "887e26fd-32ce-45e4-8b2b-6508a88f3d7c")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR037")
 					(unit 1)
@@ -8620,7 +8620,7 @@
 			(uuid "c15c3a1a-1522-4473-ac78-24066176d1a2")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R2")
 					(unit 1)
@@ -8685,7 +8685,7 @@
 			(uuid "80c2e2e0-a10c-4694-9ab2-b816f5284d58")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR019")
 					(unit 1)
@@ -8750,7 +8750,7 @@
 			(uuid "eadcfb8d-2b8f-4497-bddd-4cf782e4e1c6")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR034")
 					(unit 1)
@@ -8815,7 +8815,7 @@
 			(uuid "a573b497-ffcd-488a-81b7-b9278a7fc5bf")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR028")
 					(unit 1)
@@ -8880,7 +8880,7 @@
 			(uuid "6e7b36d7-a6a4-441c-a247-62b62734f871")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR015")
 					(unit 1)
@@ -8945,7 +8945,7 @@
 			(uuid "3ccd08ef-2cf1-4270-861c-181783754f0d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR017")
 					(unit 1)
@@ -9012,7 +9012,7 @@
 			(uuid "0c4497be-7070-4962-8f16-c3df1b4864c0")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "SW2")
 					(unit 1)
@@ -9085,7 +9085,7 @@
 			(uuid "ba808ff4-5fb2-40a8-bf89-fde4ad05142a")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "Y2")
 					(unit 1)
@@ -9150,7 +9150,7 @@
 			(uuid "07adda9d-eab3-4b69-b109-25f0d80ef6f3")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR022")
 					(unit 1)
@@ -9215,7 +9215,7 @@
 			(uuid "af45bf7e-76d5-4b15-aed5-41e69c11381d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR04")
 					(unit 1)
@@ -9282,7 +9282,7 @@
 			(uuid "240c7429-0173-4039-8bc6-b4e9bf7f8ba4")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "L1")
 					(unit 1)
@@ -9352,7 +9352,7 @@
 			(uuid "d0b1d088-999b-4334-a697-af102ad8e5d0")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C4")
 					(unit 1)
@@ -9422,7 +9422,7 @@
 			(uuid "6c6585ea-830c-4b82-b03b-7c152692f887")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C5")
 					(unit 1)
@@ -9488,7 +9488,7 @@
 			(uuid "b7810e8c-0b17-4fc2-8635-225ca7538160")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR09")
 					(unit 1)
@@ -9555,7 +9555,7 @@
 			(uuid "c3ce2f99-4183-4248-857d-5ccf1e55f4dd")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R8")
 					(unit 1)
@@ -9620,7 +9620,7 @@
 			(uuid "8f73cf1f-b439-4c93-b678-d958092545f1")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR02")
 					(unit 1)
@@ -9831,7 +9831,7 @@
 			(uuid "57934673-1c47-4c61-89af-57489c7fff86")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "U2")
 					(unit 1)
@@ -9896,7 +9896,7 @@
 			(uuid "c4656b7f-66c1-4af4-97b4-c8d2078c013d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR05")
 					(unit 1)
@@ -9966,7 +9966,7 @@
 			(uuid "dd7d139f-ddd1-481e-8b3f-6369e8b2a312")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C10")
 					(unit 1)
@@ -10038,7 +10038,7 @@
 			(uuid "f13611d0-2f25-49bb-b95f-877287e2d137")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "U1")
 					(unit 1)
@@ -10111,7 +10111,7 @@
 			(uuid "8ca1af44-7a59-4e2c-b99b-613ff8352a17")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "Y1")
 					(unit 1)
@@ -10176,7 +10176,7 @@
 			(uuid "4c6325cf-0da6-46f4-920e-4d84b450532f")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR027")
 					(unit 1)
@@ -10241,7 +10241,7 @@
 			(uuid "a319b36b-697d-4b02-a049-f3951cb7b455")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR06")
 					(unit 1)
@@ -10310,7 +10310,7 @@
 			(uuid "505114c3-1871-4f55-9a6b-d257b4d1f811")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R10")
 					(unit 1)
@@ -10375,7 +10375,7 @@
 			(uuid "1c3cd18a-b7eb-41c4-b1c2-9eeb7aefa109")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR036")
 					(unit 1)
@@ -10440,7 +10440,7 @@
 			(uuid "fc57cb55-fc3e-4e94-9d71-89640542dce0")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR014")
 					(unit 1)
@@ -10518,7 +10518,7 @@
 			(uuid "9ae2c944-15af-4092-af51-ce20b7dbc813")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "D2")
 					(unit 1)
@@ -10583,7 +10583,7 @@
 			(uuid "2bd1fb29-37d2-4768-8130-0e9cd94c36fa")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR018")
 					(unit 1)
@@ -10648,7 +10648,7 @@
 			(uuid "c3135934-b8d5-4e8c-9af1-bf4d7ea1ae61")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR011")
 					(unit 1)
@@ -10713,7 +10713,7 @@
 			(uuid "11447283-9924-46ba-8f95-485cae7937a6")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR032")
 					(unit 1)
@@ -10779,7 +10779,7 @@
 			(uuid "25e0d60e-289b-4527-8d62-39d3e661f252")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR01")
 					(unit 1)
@@ -10848,7 +10848,7 @@
 			(uuid "e28bf05c-402a-42f1-9bb2-74063307877a")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C15")
 					(unit 1)
@@ -10917,7 +10917,7 @@
 			(uuid "8a0ddd79-c69e-45df-b6a0-7ec0ebd1a82d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "J1")
 					(unit 1)
@@ -10982,7 +10982,7 @@
 			(uuid "53de9803-9f01-4253-9562-f62c766380f8")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR020")
 					(unit 1)
@@ -11097,7 +11097,7 @@
 			(uuid "afadb011-1bb8-4e89-a315-1451fae2cf3f")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "J2")
 					(unit 1)
@@ -11167,7 +11167,7 @@
 			(uuid "283e8a83-67fc-421d-b27c-3224d08293be")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C14")
 					(unit 1)
@@ -11234,7 +11234,7 @@
 			(uuid "72592c73-83a9-499a-af05-86e24e8e70a5")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "SW3")
 					(unit 1)
@@ -11299,7 +11299,7 @@
 			(uuid "3f0a541f-ca53-4b1e-942a-fced3755f70f")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR031")
 					(unit 1)
@@ -11364,7 +11364,7 @@
 			(uuid "31132cb7-119a-452b-8e9d-ad5c6b9faaac")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR025")
 					(unit 1)
@@ -11429,7 +11429,7 @@
 			(uuid "08ed02a6-5590-41af-91a5-4e18c66042c7")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR035")
 					(unit 1)
@@ -11494,7 +11494,7 @@
 			(uuid "955c3ead-310d-4d62-8a21-6c7e6daac0a6")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR033")
 					(unit 1)
@@ -11559,7 +11559,7 @@
 			(uuid "dc43f278-d9e5-4e1d-91a5-03c04294ab5f")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR013")
 					(unit 1)
@@ -11632,7 +11632,7 @@
 			(uuid "f52a3f68-c74c-48d6-b8dd-9bbef1f1c848")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "J4")
 					(unit 1)
@@ -11701,7 +11701,7 @@
 			(uuid "94fd9653-65b2-40ee-82f5-d680b85e4677")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C13")
 					(unit 1)
@@ -11771,7 +11771,7 @@
 			(uuid "ef950c01-0ef8-4b83-9f16-6ebe64a3a0a2")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C7")
 					(unit 1)
@@ -11841,7 +11841,7 @@
 			(uuid "63f7bab7-3913-4646-a95a-62a42ee69efc")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C6")
 					(unit 1)
@@ -11911,7 +11911,7 @@
 			(uuid "3d0c229d-03f0-4460-8586-38407dca29e9")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C12")
 					(unit 1)
@@ -11983,7 +11983,7 @@
 			(uuid "0207ff57-e426-4927-bf4a-9d71bb056e22")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "D1")
 					(unit 1)
@@ -12052,7 +12052,7 @@
 			(uuid "d7bdbfd0-c0c1-4122-ada0-201d71801c4e")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R4")
 					(unit 1)
@@ -12122,7 +12122,7 @@
 			(uuid "978273d4-a785-4308-b9c2-2b6e7a3b6b13")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C8")
 					(unit 1)
@@ -12187,7 +12187,7 @@
 			(uuid "b388a281-4572-4dcf-b002-9b684b58466c")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR08")
 					(unit 1)
@@ -12257,7 +12257,7 @@
 			(uuid "e59aab1e-e89d-47bb-85c9-f56859c47074")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C3")
 					(unit 1)
@@ -12327,7 +12327,7 @@
 			(uuid "87a037ce-eb94-4139-b58b-5b94de049be6")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C11")
 					(unit 1)
@@ -12393,7 +12393,7 @@
 			(uuid "71d3e906-22d1-4563-8aa4-018d51a3da96")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR010")
 					(unit 1)
@@ -12460,7 +12460,7 @@
 			(uuid "ef4a7130-0ef5-4ce4-ae2e-ce41f84bc5c3")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R7")
 					(unit 1)
@@ -12529,7 +12529,7 @@
 			(uuid "11324a81-ba58-41b4-be8c-e29c8375e31d")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "C2")
 					(unit 1)
@@ -12594,7 +12594,7 @@
 			(uuid "d20827ef-cc85-47e5-aaf1-a5fccd7d3faa")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR026")
 					(unit 1)
@@ -12659,7 +12659,7 @@
 			(uuid "c082ac9b-b14f-4ba5-a1a0-7546027b7d07")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR012")
 					(unit 1)
@@ -12726,7 +12726,7 @@
 			(uuid "21b4dad0-c932-4971-ae0c-a8646e8cd485")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R6")
 					(unit 1)
@@ -12795,7 +12795,7 @@
 			(uuid "a1c9b600-3e39-4835-970a-ddbaa5c76379")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R9")
 					(unit 1)
@@ -12860,7 +12860,7 @@
 			(uuid "22ddfceb-867a-42ed-a856-e72f9c75b9a7")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR07")
 					(unit 1)
@@ -12939,7 +12939,7 @@
 			(uuid "f240af86-737f-40ef-816d-4ec66dc32478")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(page "4")
 				)
@@ -13017,7 +13017,7 @@
 			(uuid "405d49e0-843a-4f22-bd1c-54df0f2a1c12")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(page "2")
 				)
@@ -13095,7 +13095,7 @@
 			(uuid "3e3b273e-fa7d-4666-80d5-b0095363d656")
 		)
 		(instances
-			(project "RTSpeed"
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(page "3")
 				)
