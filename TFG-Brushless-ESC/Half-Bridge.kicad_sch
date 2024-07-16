@@ -6,6 +6,8 @@
 	(paper "A5" portrait)
 	(title_block
 		(title "Half Bridge")
+		(company "Adrián Teixeira de Uña")
+		(comment 1 "https://github.com/AdriTeixeHax")
 	)
 	(lib_symbols
 		(symbol "Device:C"
@@ -1787,7 +1789,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "02c907f4-705b-4492-b3a5-e59bc9e4b4e0")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR052"
 			(at 48.26 85.725 0)
 			(effects
 				(font
@@ -1836,16 +1838,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR052")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR042")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR047")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -1860,7 +1862,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "13a931ae-530e-4f26-99cf-4d4102595320")
-		(property "Reference" "C22"
+		(property "Reference" "C24"
 			(at 40.64 74.295 0)
 			(effects
 				(font
@@ -1931,16 +1933,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "C24")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "C22")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "C23")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -2031,7 +2033,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33a6fec9-e8b2-4869-ac06-8644dc96bbcb")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR051"
 			(at 96.52 81.915 0)
 			(effects
 				(font
@@ -2080,179 +2082,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR051")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR041")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR046")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:2N7000")
-		(at 93.98 83.185 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "344987f6-66a2-4162-895f-d9f0a2ad31d5")
-		(property "Reference" "Q5"
-			(at 99.695 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TK58E06N1"
-			(at 99.695 84.455 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 99.06 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Vt" "    4V"
-			(at 107.95 80.645 0)
-			(show_name yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Rds" "   0.036R"
-			(at 107.95 82.55 0)
-			(show_name yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "VDSmax" "100V"
-			(at 107.95 84.455 0)
-			(show_name yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "IDmax" " 42A @ 20ºC"
-			(at 107.95 86.36 0)
-			(show_name yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "D:\\dev\\RTSpeed\\simulation\\models\\irf1310ns.spi"
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "irf1310ns"
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=1 2=2 3=3"
-			(at 93.98 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4eaa6907-25a2-446a-a37c-4cf5d516f933")
-		)
-		(pin "2"
-			(uuid "7678aebb-71bf-4bcf-9e69-468bbf8b10af")
-		)
-		(pin "3"
-			(uuid "aed7c611-af71-46b4-b3f2-b303bbed496a")
-		)
-		(instances
-			(project "TFG-Brushless-ESC"
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "Q5")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
-					(reference "Q1")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
-					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -2381,7 +2220,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "572f7400-bcc4-4cde-baf4-8506f42313e4")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR057"
 			(at 37.465 85.725 0)
 			(effects
 				(font
@@ -2430,16 +2269,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR057")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR055")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR056")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -2586,7 +2425,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6262f2bb-7461-4133-a271-844d6af8bdbe")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR054"
 			(at 96.52 107.315 0)
 			(effects
 				(font
@@ -2635,16 +2474,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR054")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR044")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR049")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -2822,125 +2661,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:2N7000")
-		(at 93.98 95.885 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7e875157-8857-4838-a4a1-43536188c033")
-		(property "Reference" "Q6"
-			(at 99.695 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TK58E06N1"
-			(at 99.695 97.1549 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 99.06 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "D:\\dev\\RTSpeed\\simulation\\models\\irf1310ns.spi"
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "irf1310ns"
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=1 2=2 3=3"
-			(at 93.98 95.885 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0dd83ff6-a301-4107-89bb-6095a66c76fe")
-		)
-		(pin "2"
-			(uuid "19da2c5d-3d2b-4613-832c-0bf4973a7c52")
-		)
-		(pin "3"
-			(uuid "008e15fa-ba91-4c04-96b1-8508337d6f2c")
-		)
-		(instances
-			(project "TFG-Brushless-ESC"
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "Q6")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
-					(reference "Q2")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 62.23 100.965 0)
 		(unit 1)
@@ -2949,7 +2669,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "824b9a6e-0f2d-4281-804a-d52b9fb6029f")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR053"
 			(at 62.23 107.315 0)
 			(effects
 				(font
@@ -2998,6 +2718,10 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR053")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR043")
 					(unit 1)
@@ -3006,8 +2730,167 @@
 					(reference "#PWR048")
 					(unit 1)
 				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7000")
+		(at 93.98 83.185 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ee838c3-cc76-4759-9dcc-7546678d9fb3")
+		(property "Reference" "Q1"
+			(at 99.695 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TK58E06N1"
+			(at 99.695 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
+			(at 99.06 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vt" "    4V"
+			(at 107.95 80.645 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Rds" "   0.036R"
+			(at 107.95 82.55 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "VDSmax" "100V"
+			(at 107.95 84.455 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "IDmax" " 42A @ 20ºC"
+			(at 107.95 86.36 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "D:\\dev\\RTSpeed\\simulation\\models\\irf1310ns.spi"
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "irf1310ns"
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 93.98 83.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2e4c75c-7c58-475f-b50c-6972e584df8b")
+		)
+		(pin "2"
+			(uuid "e6e1b956-6c9c-4f8d-bd9f-017c2de0ffde")
+		)
+		(pin "3"
+			(uuid "d62d1e51-eb1c-4a78-9067-91f9f6752b5f")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR053")
+					(reference "Q3")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "Q1")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -3109,6 +2992,169 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7000")
+		(at 93.98 95.885 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed5f8085-88fb-48cf-89a3-08a89b35a3b5")
+		(property "Reference" "Q4"
+			(at 99.695 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TK58E06N1"
+			(at 99.695 97.155 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
+			(at 99.06 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/70226/70226.pdf"
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vt" "    4V"
+			(at 107.95 93.345 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Rds" "   0.036R"
+			(at 107.95 95.25 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "VDSmax" "100V"
+			(at 107.95 97.155 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "IDmax" " 42A @ 20ºC"
+			(at 107.95 99.06 0)
+			(show_name yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "D:\\dev\\RTSpeed\\simulation\\models\\irf1310ns.spi"
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "irf1310ns"
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=1 2=2 3=3"
+			(at 93.98 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c505ab78-343a-4154-857d-6140be4d32a4")
+		)
+		(pin "2"
+			(uuid "342af158-207b-4db4-ae2e-635ee7e3a65d")
+		)
+		(pin "3"
+			(uuid "4a7a115c-0740-46aa-84d5-0b9c1c40e6f8")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "Q6")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "Q4")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 73.025 69.215 0)
 		(unit 1)
@@ -3118,7 +3164,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa2f1d07-2c83-4f3b-8129-bc6409efe55f")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR050"
 			(at 73.025 73.025 0)
 			(effects
 				(font
@@ -3167,16 +3213,16 @@
 		)
 		(instances
 			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR050")
+					(unit 1)
+				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
 					(reference "#PWR040")
 					(unit 1)
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR045")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR050")
 					(unit 1)
 				)
 			)
