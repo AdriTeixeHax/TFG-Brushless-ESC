@@ -59,18 +59,30 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define HIN_U_Pin GPIO_PIN_5
-#define HIN_U_GPIO_Port GPIOA
-#define LIN_U_Pin GPIO_PIN_6
-#define LIN_U_GPIO_Port GPIOA
-#define HIN_V_Pin GPIO_PIN_7
-#define HIN_V_GPIO_Port GPIOA
-#define LIN_V_Pin GPIO_PIN_0
-#define LIN_V_GPIO_Port GPIOB
-#define HIN_W_Pin GPIO_PIN_1
-#define HIN_W_GPIO_Port GPIOB
-#define LIN_W_Pin GPIO_PIN_10
-#define LIN_W_GPIO_Port GPIOB
+#define I_SENSE_U_Pin GPIO_PIN_0
+#define I_SENSE_U_GPIO_Port GPIOA
+#define I_SENSE_V_Pin GPIO_PIN_1
+#define I_SENSE_V_GPIO_Port GPIOA
+#define I_SENSE_W_Pin GPIO_PIN_2
+#define I_SENSE_W_GPIO_Port GPIOA
+#define V_SENSE_U_Pin GPIO_PIN_3
+#define V_SENSE_U_GPIO_Port GPIOA
+#define V_SENSE_V_Pin GPIO_PIN_4
+#define V_SENSE_V_GPIO_Port GPIOA
+#define V_SENSE_W_Pin GPIO_PIN_5
+#define V_SENSE_W_GPIO_Port GPIOA
+#define HI_U_Pin GPIO_PIN_6
+#define HI_U_GPIO_Port GPIOA
+#define HI_V_Pin GPIO_PIN_7
+#define HI_V_GPIO_Port GPIOA
+#define HI_W_Pin GPIO_PIN_0
+#define HI_W_GPIO_Port GPIOB
+#define LO_W_Pin GPIO_PIN_8
+#define LO_W_GPIO_Port GPIOA
+#define LO_V_Pin GPIO_PIN_9
+#define LO_V_GPIO_Port GPIOA
+#define LO_U_Pin GPIO_PIN_10
+#define LO_U_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
