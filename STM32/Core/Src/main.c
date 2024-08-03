@@ -22,7 +22,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,6 +37,8 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
+typedef enum {HI_U = 0, HI_V, HI_W, LO_U, LO_V, LO_W} mosfet_pins;
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -47,6 +48,12 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
+
+uint8_t Hall_U_State = 0;
+uint8_t Hall_V_State = 0;
+uint8_t Hall_W_State = 0;
+
+uint8_t state = 0;
 
 /* USER CODE END PV */
 
@@ -62,6 +69,64 @@ static void MX_TIM1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+void PWMSet(mosfet_pins pin, uint16_t value)
+{
+    // TIM 3 Channel 1 - HI_U
+    // TIM 3 Channel 2 - HI_V
+    // TIM 3 Channel 3 - HI_W
+    // TIM 1 Channel 3 - LO_U
+    // TIM 1 Channel 2 - LO_V
+    // TIM 1 Channel 1 - LO_W
+	switch(pin)
+	{
+	case HI_U:
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
+		break;
+	case HI_V:
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, value);
+		break;
+	case HI_W:
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, value);
+		break;
+	case LO_U:
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, value);
+		break;
+	case LO_V:
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, value);
+		break;
+	case LO_W:
+		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, value);
+		break;
+	default:
+		break;
+	}
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == GPIO_PIN_1)
+  {
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+		  Hall_U_State = 1;
+	  else
+		  Hall_U_State = 0;
+  }
+  else if(GPIO_Pin == GPIO_PIN_2)
+  {
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+		  Hall_V_State = 1;
+	  else
+		  Hall_V_State = 0;
+  }
+  else if(GPIO_Pin == GPIO_PIN_10)
+  {
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+		  Hall_W_State = 1;
+	  else
+		  Hall_W_State = 0;
+  }
+}
 
 /* USER CODE END 0 */
 
@@ -99,7 +164,14 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,12 +179,68 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
-	HAL_Delay(1000);
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 127);
-	HAL_Delay(1000);
+
     /* USER CODE BEGIN 3 */
-  }
+
+	// U = Yellow
+	// V = Blue
+	// W = Green
+	state = (Hall_U_State << 2) | (Hall_V_State << 1) | (Hall_W_State);
+
+	switch(state)
+	{
+	case 0b100:// Rotor facing
+		PWMSet(HI_U, 0);
+		PWMSet(HI_V, 0);
+		PWMSet(HI_W, 127);
+		PWMSet(LO_U, 0);
+		PWMSet(LO_V, 0);
+		PWMSet(LO_W, 127);
+		break;
+	case 0b110:
+		PWMSet(HI_U, 0);
+		PWMSet(HI_V, 127);
+		PWMSet(HI_W, 127);
+		PWMSet(LO_U, 0);
+		PWMSet(LO_V, 0);
+		PWMSet(LO_W, 0);
+		break;
+	case 0b010:
+		PWMSet(HI_U, 0);
+		PWMSet(HI_V, 127);
+		PWMSet(HI_W, 0);
+		PWMSet(LO_U, 0);
+		PWMSet(LO_V, 127);
+		PWMSet(LO_W, 0);
+		break;
+	case 0b011:
+		PWMSet(HI_U, 0);
+		PWMSet(HI_V, 0);
+		PWMSet(HI_W, 0);
+		PWMSet(LO_U, 127);
+		PWMSet(LO_V, 127);
+		PWMSet(LO_W, 0);
+		break;
+	case 0b001:
+		PWMSet(HI_U, 127);
+		PWMSet(HI_V, 0);
+		PWMSet(HI_W, 0);
+		PWMSet(LO_U, 127);
+		PWMSet(LO_V, 0);
+		PWMSet(LO_W, 0);
+		break;
+	case 0b101:
+		PWMSet(HI_U, 127);
+		PWMSet(HI_V, 0);
+		PWMSet(HI_W, 0);
+		PWMSet(LO_U, 0);
+		PWMSet(LO_V, 0);
+		PWMSet(LO_W, 127);
+		break;
+	default:
+		break;
+	} // !switch
+  } // !while
   /* USER CODE END 3 */
 }
 
@@ -133,8 +261,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 25;
@@ -150,7 +280,7 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
@@ -306,9 +436,9 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
+  htim3.Init.Prescaler = 250;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 65535;
+  htim3.Init.Period = 255;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -351,6 +481,7 @@ static void MX_TIM3_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
 /* USER CODE BEGIN MX_GPIO_Init_1 */
 /* USER CODE END MX_GPIO_Init_1 */
 
@@ -359,6 +490,22 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pins : Hall_U_Pin Hall_V_Pin Hall_W_Pin */
+  GPIO_InitStruct.Pin = Hall_U_Pin|Hall_V_Pin|Hall_W_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
