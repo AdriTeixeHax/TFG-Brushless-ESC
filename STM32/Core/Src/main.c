@@ -191,50 +191,50 @@ int main(void)
 	{
 	case 0b100:// Rotor facing
 		PWMSet(HI_U, 0);
-		PWMSet(HI_V, 0);
-		PWMSet(HI_W, 127);
 		PWMSet(LO_U, 0);
+		PWMSet(HI_V, 127);
 		PWMSet(LO_V, 0);
+		PWMSet(HI_W, 0);
 		PWMSet(LO_W, 127);
 		break;
 	case 0b110:
 		PWMSet(HI_U, 0);
+		PWMSet(LO_U, 127);
 		PWMSet(HI_V, 127);
-		PWMSet(HI_W, 127);
-		PWMSet(LO_U, 0);
 		PWMSet(LO_V, 0);
+		PWMSet(HI_W, 0);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b010:
 		PWMSet(HI_U, 0);
-		PWMSet(HI_V, 127);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_U, 0);
-		PWMSet(LO_V, 127);
+		PWMSet(LO_U, 127);
+		PWMSet(HI_V, 0);
+		PWMSet(LO_V, 0);
+		PWMSet(HI_W, 127);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b011:
 		PWMSet(HI_U, 0);
+		PWMSet(LO_U, 0);
 		PWMSet(HI_V, 0);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_U, 127);
 		PWMSet(LO_V, 127);
+		PWMSet(HI_W, 127);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b001:
 		PWMSet(HI_U, 127);
+		PWMSet(LO_U, 0);
 		PWMSet(HI_V, 0);
+		PWMSet(LO_V, 127);
 		PWMSet(HI_W, 0);
-		PWMSet(LO_U, 127);
-		PWMSet(LO_V, 0);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b101:
 		PWMSet(HI_U, 127);
-		PWMSet(HI_V, 0);
-		PWMSet(HI_W, 0);
 		PWMSet(LO_U, 0);
+		PWMSet(HI_V, 0);
 		PWMSet(LO_V, 0);
+		PWMSet(HI_W, 0);
 		PWMSet(LO_W, 127);
 		break;
 	default:
@@ -490,6 +490,16 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(N_USER_LED_GPIO_Port, N_USER_LED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : N_USER_LED_Pin */
+  GPIO_InitStruct.Pin = N_USER_LED_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(N_USER_LED_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : Hall_U_Pin Hall_V_Pin Hall_W_Pin */
   GPIO_InitStruct.Pin = Hall_U_Pin|Hall_V_Pin|Hall_W_Pin;
