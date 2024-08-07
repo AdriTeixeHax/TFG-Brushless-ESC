@@ -599,10 +599,10 @@ int main(void)
  800062e:	4862      	ldr	r0, [pc, #392]	@ (80007b8 <main+0x1d4>)
  8000630:	f003 f95a 	bl	80038e8 <HAL_TIM_PWM_Start>
     /* USER CODE BEGIN 3 */
-//	Hall_U_State = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1);
-//	Hall_V_State = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_2);
-//	Hall_W_State = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10);
 
+	// U = Yellow
+	// V = Blue
+	// W = Green
 	state = (Hall_U_State << 2) | (Hall_V_State << 1) | (Hall_W_State);
  8000634:	4b61      	ldr	r3, [pc, #388]	@ (80007bc <main+0x1d8>)
  8000636:	781b      	ldrb	r3, [r3, #0]
@@ -639,26 +639,26 @@ int main(void)
  800067c:	0800077f 	.word	0x0800077f
  8000680:	080006b7 	.word	0x080006b7
 	{
-	case 0b100:
+	case 0b100:// Rotor facing
 		PWMSet(HI_U, 0);
  8000684:	2100      	movs	r1, #0
  8000686:	2000      	movs	r0, #0
  8000688:	f7ff ff1e 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 0);
- 800068c:	2100      	movs	r1, #0
- 800068e:	2001      	movs	r0, #1
- 8000690:	f7ff ff1a 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 127);
- 8000694:	217f      	movs	r1, #127	@ 0x7f
- 8000696:	2002      	movs	r0, #2
- 8000698:	f7ff ff16 	bl	80004c8 <PWMSet>
 		PWMSet(LO_U, 0);
- 800069c:	2100      	movs	r1, #0
- 800069e:	2003      	movs	r0, #3
- 80006a0:	f7ff ff12 	bl	80004c8 <PWMSet>
+ 800068c:	2100      	movs	r1, #0
+ 800068e:	2003      	movs	r0, #3
+ 8000690:	f7ff ff1a 	bl	80004c8 <PWMSet>
+		PWMSet(HI_V, 127);
+ 8000694:	217f      	movs	r1, #127	@ 0x7f
+ 8000696:	2001      	movs	r0, #1
+ 8000698:	f7ff ff16 	bl	80004c8 <PWMSet>
 		PWMSet(LO_V, 0);
+ 800069c:	2100      	movs	r1, #0
+ 800069e:	2004      	movs	r0, #4
+ 80006a0:	f7ff ff12 	bl	80004c8 <PWMSet>
+		PWMSet(HI_W, 0);
  80006a4:	2100      	movs	r1, #0
- 80006a6:	2004      	movs	r0, #4
+ 80006a6:	2002      	movs	r0, #2
  80006a8:	f7ff ff0e 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 127);
  80006ac:	217f      	movs	r1, #127	@ 0x7f
@@ -671,21 +671,21 @@ int main(void)
  80006b6:	2100      	movs	r1, #0
  80006b8:	2000      	movs	r0, #0
  80006ba:	f7ff ff05 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 127);
+		PWMSet(LO_U, 127);
  80006be:	217f      	movs	r1, #127	@ 0x7f
- 80006c0:	2001      	movs	r0, #1
+ 80006c0:	2003      	movs	r0, #3
  80006c2:	f7ff ff01 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 127);
+		PWMSet(HI_V, 127);
  80006c6:	217f      	movs	r1, #127	@ 0x7f
- 80006c8:	2002      	movs	r0, #2
+ 80006c8:	2001      	movs	r0, #1
  80006ca:	f7ff fefd 	bl	80004c8 <PWMSet>
-		PWMSet(LO_U, 0);
- 80006ce:	2100      	movs	r1, #0
- 80006d0:	2003      	movs	r0, #3
- 80006d2:	f7ff fef9 	bl	80004c8 <PWMSet>
 		PWMSet(LO_V, 0);
+ 80006ce:	2100      	movs	r1, #0
+ 80006d0:	2004      	movs	r0, #4
+ 80006d2:	f7ff fef9 	bl	80004c8 <PWMSet>
+		PWMSet(HI_W, 0);
  80006d6:	2100      	movs	r1, #0
- 80006d8:	2004      	movs	r0, #4
+ 80006d8:	2002      	movs	r0, #2
  80006da:	f7ff fef5 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 0);
  80006de:	2100      	movs	r1, #0
@@ -698,21 +698,21 @@ int main(void)
  80006e8:	2100      	movs	r1, #0
  80006ea:	2000      	movs	r0, #0
  80006ec:	f7ff feec 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 127);
+		PWMSet(LO_U, 127);
  80006f0:	217f      	movs	r1, #127	@ 0x7f
- 80006f2:	2001      	movs	r0, #1
+ 80006f2:	2003      	movs	r0, #3
  80006f4:	f7ff fee8 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 0);
+		PWMSet(HI_V, 0);
  80006f8:	2100      	movs	r1, #0
- 80006fa:	2002      	movs	r0, #2
+ 80006fa:	2001      	movs	r0, #1
  80006fc:	f7ff fee4 	bl	80004c8 <PWMSet>
-		PWMSet(LO_U, 0);
+		PWMSet(LO_V, 0);
  8000700:	2100      	movs	r1, #0
- 8000702:	2003      	movs	r0, #3
+ 8000702:	2004      	movs	r0, #4
  8000704:	f7ff fee0 	bl	80004c8 <PWMSet>
-		PWMSet(LO_V, 127);
+		PWMSet(HI_W, 127);
  8000708:	217f      	movs	r1, #127	@ 0x7f
- 800070a:	2004      	movs	r0, #4
+ 800070a:	2002      	movs	r0, #2
  800070c:	f7ff fedc 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 0);
  8000710:	2100      	movs	r1, #0
@@ -725,21 +725,21 @@ int main(void)
  800071a:	2100      	movs	r1, #0
  800071c:	2000      	movs	r0, #0
  800071e:	f7ff fed3 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 0);
+		PWMSet(LO_U, 0);
  8000722:	2100      	movs	r1, #0
- 8000724:	2001      	movs	r0, #1
+ 8000724:	2003      	movs	r0, #3
  8000726:	f7ff fecf 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 0);
+		PWMSet(HI_V, 0);
  800072a:	2100      	movs	r1, #0
- 800072c:	2002      	movs	r0, #2
+ 800072c:	2001      	movs	r0, #1
  800072e:	f7ff fecb 	bl	80004c8 <PWMSet>
-		PWMSet(LO_U, 127);
- 8000732:	217f      	movs	r1, #127	@ 0x7f
- 8000734:	2003      	movs	r0, #3
- 8000736:	f7ff fec7 	bl	80004c8 <PWMSet>
 		PWMSet(LO_V, 127);
+ 8000732:	217f      	movs	r1, #127	@ 0x7f
+ 8000734:	2004      	movs	r0, #4
+ 8000736:	f7ff fec7 	bl	80004c8 <PWMSet>
+		PWMSet(HI_W, 127);
  800073a:	217f      	movs	r1, #127	@ 0x7f
- 800073c:	2004      	movs	r0, #4
+ 800073c:	2002      	movs	r0, #2
  800073e:	f7ff fec3 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 0);
  8000742:	2100      	movs	r1, #0
@@ -752,21 +752,21 @@ int main(void)
  800074c:	217f      	movs	r1, #127	@ 0x7f
  800074e:	2000      	movs	r0, #0
  8000750:	f7ff feba 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 0);
+		PWMSet(LO_U, 0);
  8000754:	2100      	movs	r1, #0
- 8000756:	2001      	movs	r0, #1
+ 8000756:	2003      	movs	r0, #3
  8000758:	f7ff feb6 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 0);
+		PWMSet(HI_V, 0);
  800075c:	2100      	movs	r1, #0
- 800075e:	2002      	movs	r0, #2
+ 800075e:	2001      	movs	r0, #1
  8000760:	f7ff feb2 	bl	80004c8 <PWMSet>
-		PWMSet(LO_U, 127);
+		PWMSet(LO_V, 127);
  8000764:	217f      	movs	r1, #127	@ 0x7f
- 8000766:	2003      	movs	r0, #3
+ 8000766:	2004      	movs	r0, #4
  8000768:	f7ff feae 	bl	80004c8 <PWMSet>
-		PWMSet(LO_V, 0);
+		PWMSet(HI_W, 0);
  800076c:	2100      	movs	r1, #0
- 800076e:	2004      	movs	r0, #4
+ 800076e:	2002      	movs	r0, #2
  8000770:	f7ff feaa 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 0);
  8000774:	2100      	movs	r1, #0
@@ -779,21 +779,21 @@ int main(void)
  800077e:	217f      	movs	r1, #127	@ 0x7f
  8000780:	2000      	movs	r0, #0
  8000782:	f7ff fea1 	bl	80004c8 <PWMSet>
-		PWMSet(HI_V, 0);
- 8000786:	2100      	movs	r1, #0
- 8000788:	2001      	movs	r0, #1
- 800078a:	f7ff fe9d 	bl	80004c8 <PWMSet>
-		PWMSet(HI_W, 0);
- 800078e:	2100      	movs	r1, #0
- 8000790:	2002      	movs	r0, #2
- 8000792:	f7ff fe99 	bl	80004c8 <PWMSet>
 		PWMSet(LO_U, 0);
- 8000796:	2100      	movs	r1, #0
- 8000798:	2003      	movs	r0, #3
- 800079a:	f7ff fe95 	bl	80004c8 <PWMSet>
+ 8000786:	2100      	movs	r1, #0
+ 8000788:	2003      	movs	r0, #3
+ 800078a:	f7ff fe9d 	bl	80004c8 <PWMSet>
+		PWMSet(HI_V, 0);
+ 800078e:	2100      	movs	r1, #0
+ 8000790:	2001      	movs	r0, #1
+ 8000792:	f7ff fe99 	bl	80004c8 <PWMSet>
 		PWMSet(LO_V, 0);
+ 8000796:	2100      	movs	r1, #0
+ 8000798:	2004      	movs	r0, #4
+ 800079a:	f7ff fe95 	bl	80004c8 <PWMSet>
+		PWMSet(HI_W, 0);
  800079e:	2100      	movs	r1, #0
- 80007a0:	2004      	movs	r0, #4
+ 80007a0:	2002      	movs	r0, #2
  80007a2:	f7ff fe91 	bl	80004c8 <PWMSet>
 		PWMSet(LO_W, 127);
  80007a6:	217f      	movs	r1, #127	@ 0x7f

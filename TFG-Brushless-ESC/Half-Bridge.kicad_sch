@@ -3269,7 +3269,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e4e421f-a082-4906-a31e-641b5a70c9d4")
-		(property "Reference" "Q7"
+		(property "Reference" "Q9"
 			(at 83.82 46.9899 0)
 			(effects
 				(font
@@ -3705,7 +3705,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "585c6727-af40-470c-b6f3-1f873d8e4bc3")
-		(property "Reference" "Q1"
+		(property "Reference" "Q3"
 			(at 83.82 59.6899 0)
 			(effects
 				(font
@@ -4575,7 +4575,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 81.026 72.644 90)
 			(effects
 				(font
@@ -5134,7 +5134,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
 			(at 173.355 66.04 0)
 			(effects
 				(font
