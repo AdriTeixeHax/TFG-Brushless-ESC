@@ -1,48 +1,44 @@
-// float temp = 0;
-
-// char msg[8];
-// char data[6];
-
-// void setup()
-// {
-//     Serial.begin(115200, SERIAL_8N1);
-//     Serial.setTimeout(10);
-// }
-
-// void loop()
-// {
-//     temp = sin(micros()*1e-6 * 2*PI*10);
-
-//     strcpy(msg, "");
-//     dtostrf(temp, 6, 3, msg);
-
-//     Serial.println(msg);
-//     Serial.flush();
-// }
-
-#include <LiquidCrystal_I2C.h>
-
-LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address 0x27, 16 column and 2 rows
+float x = 0;
 
 void setup()
 {
-  lcd.init(); // initialize the lcd
-  lcd.backlight();
+    Serial.begin(115200);
 }
 
 void loop()
 {
-  lcd.clear();                 // clear display
-  lcd.setCursor(0, 0);         // move cursor to   (0, 0)
-  lcd.print("Arduino");        // print message at (0, 0)
-  lcd.setCursor(2, 1);         // move cursor to   (2, 1)
-  lcd.print("GetStarted.com"); // print message at (2, 1)
-  delay(2000);                 // display the above for two seconds
+    char msg[6], result[8];
+    static char incomingByte = '1';
 
-  lcd.clear();                  // clear display
-  lcd.setCursor(3, 0);          // move cursor to   (3, 0)
-  lcd.print("DIYables");        // print message at (3, 0)
-  lcd.setCursor(0, 1);          // move cursor to   (0, 1)
-  lcd.print("www.diyables.io"); // print message at (0, 1)
-  delay(2000);                  // display the above for two seconds
+    if (Serial.available() > 0)
+    {
+        incomingByte = Serial.read();
+    }
+
+    if (incomingByte == '1')
+    {  
+        dtostrf(sin(x), sizeof(msg), 4, msg);
+        strcat(msg, "\n");
+        if (sin(x) >= 0)
+            sprintf(result, "%s%s", " ", msg);
+        else
+            sprintf(result, "%s", msg);
+
+        Serial.print(result);
+    }
+    else
+    {
+        dtostrf(abs(sin(x)), sizeof(msg), 4, msg);
+        strcat(msg, "\n");
+        if (abs(sin(x)) >= 0)
+            sprintf(result, "%s%s", " ", msg);
+        else
+            sprintf(result, "%s", msg);
+
+        Serial.print(result);
+    }
+    
+    Serial.print(result);
+    
+    x += 0.01;
 }
