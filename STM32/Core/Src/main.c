@@ -77,31 +77,31 @@ static void MX_TIM4_Init(void);
 
 void PWMSet(mosfet_pins pin, uint16_t value)
 {
-    // TIM 3 Channel 1 - HI_U
-    // TIM 3 Channel 2 - HI_V
-    // TIM 3 Channel 3 - HI_W
-    // TIM 1 Channel 3 - LO_U
-    // TIM 1 Channel 2 - LO_V
-    // TIM 1 Channel 1 - LO_W
+    // TIM 2 Channel 3 - HI_U
+    // TIM 3 Channel 1 - HI_V
+    // TIM 4 Channel 2 - HI_W
+    // TIM 3 Channel 4 - LO_U
+    // TIM 2 Channel 1 - LO_V
+    // TIM 4 Channel 1 - LO_W
 	switch(pin)
 	{
 	case HI_U:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, value);
 		break;
 	case HI_V:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, value);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
 		break;
 	case HI_W:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, value);
+		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, value);
 		break;
 	case LO_U:
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, value);
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, value);
 		break;
 	case LO_V:
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, value);
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, value);
 		break;
 	case LO_W:
-		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, value);
+		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, value);
 		break;
 	default:
 		break;
@@ -110,23 +110,23 @@ void PWMSet(mosfet_pins pin, uint16_t value)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  if(GPIO_Pin == GPIO_PIN_1)
+  if(GPIO_Pin == GPIO_PIN_8)
   {
-	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_U_State = 1;
 	  else
 		  Hall_U_State = 0;
   }
-  else if(GPIO_Pin == GPIO_PIN_2)
+  else if(GPIO_Pin == GPIO_PIN_9)
   {
-	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_V_State = 1;
 	  else
 		  Hall_V_State = 0;
   }
   else if(GPIO_Pin == GPIO_PIN_10)
   {
-	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_W_State = 1;
 	  else
 		  Hall_W_State = 0;
@@ -172,12 +172,12 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); // LO_V
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); // HI_U
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // HI_V
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4); // LO_U
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1); // LO_W
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2); // HI_W
 
   /* USER CODE END 2 */
 
@@ -573,9 +573,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(N_USER_LED_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Hall_U_Pin Hall_V_Pin Hall_W_Pin */
-  GPIO_InitStruct.Pin = Hall_U_Pin|Hall_V_Pin|Hall_W_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : HALL_U_Pin HALL_V_Pin HALL_W_Pin */
+  GPIO_InitStruct.Pin = HALL_U_Pin|HALL_V_Pin|HALL_W_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
@@ -585,6 +585,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(N_USER_LEDA15_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
