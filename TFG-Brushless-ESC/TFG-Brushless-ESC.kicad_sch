@@ -9072,7 +9072,7 @@
 		)
 		(uuid "2dd4b963-61f5-403e-a321-302747551f51")
 	)
-	(text "STM32 Power handling"
+	(text "STM32 Power filtering"
 		(exclude_from_sim no)
 		(at 199.39 17.78 0)
 		(effects
@@ -9083,7 +9083,7 @@
 		)
 		(uuid "5a5722fa-d4e7-4337-9ff3-7b75841622e7")
 	)
-	(text "Connector protection"
+	(text "Connector protections"
 		(exclude_from_sim no)
 		(at 46.99 167.64 0)
 		(effects
@@ -12027,7 +12027,7 @@
 				)
 			)
 		)
-		(property "Value" "15 A"
+		(property "Value" "15A"
 			(at 71.12 175.26 90)
 			(effects
 				(font
@@ -12044,7 +12044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/fuse-218-datasheet?assetguid=a96d72b7-5296-4815-88b4-98b2f6738874"
 			(at 71.12 177.8 0)
 			(effects
 				(font
@@ -17836,7 +17836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse_ptc_minismdc_datasheet?assetguid=3ed735aa-64ed-43a6-bc20-610590bc99c6"
 			(at 125.095 177.8 0)
 			(effects
 				(font

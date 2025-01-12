@@ -58,6 +58,8 @@ uint8_t Hall_W_State = 0;
 
 uint8_t state = 0;
 
+uint32_t speed = 256 ;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,27 +80,27 @@ static void MX_TIM4_Init(void);
 void PWMSet(mosfet_pins pin, uint16_t value)
 {
     // TIM 2 Channel 3 - HI_U
-    // TIM 3 Channel 1 - HI_V
-    // TIM 4 Channel 2 - HI_W
     // TIM 3 Channel 4 - LO_U
+    // TIM 3 Channel 1 - HI_V
     // TIM 2 Channel 1 - LO_V
+    // TIM 4 Channel 2 - HI_W
     // TIM 4 Channel 1 - LO_W
 	switch(pin)
 	{
 	case HI_U:
 		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, value);
 		break;
-	case HI_V:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
-		break;
-	case HI_W:
-		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, value);
-		break;
 	case LO_U:
 		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, value);
 		break;
+	case HI_V:
+		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
+		break;
 	case LO_V:
 		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, value);
+		break;
+	case HI_W:
+		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, value);
 		break;
 	case LO_W:
 		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, value);
@@ -196,53 +198,53 @@ int main(void)
 
 	switch(state)
 	{
-	case 0b100:// Rotor facing
+	case 0b100:
 		PWMSet(HI_U, 0);
 		PWMSet(LO_U, 0);
-		PWMSet(HI_V, 127);
+		PWMSet(HI_V, speed);
 		PWMSet(LO_V, 0);
 		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 127);
+		PWMSet(LO_W, 256);
 		break;
 	case 0b110:
 		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 127);
-		PWMSet(HI_V, 127);
+		PWMSet(LO_U, 256);
+		PWMSet(HI_V, speed);
 		PWMSet(LO_V, 0);
 		PWMSet(HI_W, 0);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b010:
 		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 127);
+		PWMSet(LO_U, 256);
 		PWMSet(HI_V, 0);
 		PWMSet(LO_V, 0);
-		PWMSet(HI_W, 127);
+		PWMSet(HI_W, speed);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b011:
 		PWMSet(HI_U, 0);
 		PWMSet(LO_U, 0);
 		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 127);
-		PWMSet(HI_W, 127);
+		PWMSet(LO_V, 256);
+		PWMSet(HI_W, speed);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b001:
-		PWMSet(HI_U, 127);
+		PWMSet(HI_U, speed);
 		PWMSet(LO_U, 0);
 		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 127);
+		PWMSet(LO_V, 256);
 		PWMSet(HI_W, 0);
 		PWMSet(LO_W, 0);
 		break;
 	case 0b101:
-		PWMSet(HI_U, 127);
+		PWMSet(HI_U, speed);
 		PWMSet(LO_U, 0);
 		PWMSet(HI_V, 0);
 		PWMSet(LO_V, 0);
 		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 127);
+		PWMSet(LO_W, 256);
 		break;
 	default:
 		break;
@@ -405,7 +407,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 4294967295;
+  htim2.Init.Period = 255;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
@@ -458,7 +460,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 65535;
+  htim3.Init.Period = 255;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -511,7 +513,7 @@ static void MX_TIM4_Init(void)
   htim4.Instance = TIM4;
   htim4.Init.Prescaler = 0;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 65535;
+  htim4.Init.Period = 255;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)
