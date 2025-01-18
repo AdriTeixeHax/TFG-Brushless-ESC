@@ -174,12 +174,12 @@ int main(void)
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); // LO_V
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); // HI_U
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // HI_V
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4); // LO_U
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1); // LO_W
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2); // HI_W
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 
   /* USER CODE END 2 */
 

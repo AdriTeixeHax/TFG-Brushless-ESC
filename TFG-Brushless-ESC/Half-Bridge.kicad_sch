@@ -1992,12 +1992,6 @@
 		(uuid "907c141a-07f4-42b0-8a64-23c49a666e75")
 	)
 	(junction
-		(at 186.69 94.615)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9284b98c-91a4-464b-8a79-a2d75c47e076")
-	)
-	(junction
 		(at 127.635 98.425)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2253,16 +2247,6 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 94.615) (xy 186.69 94.615)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "62da5f3b-58a5-434c-8671-e50f02b4bd87")
-	)
-	(wire
-		(pts
 			(xy 71.755 74.295) (xy 60.96 74.295)
 		)
 		(stroke
@@ -2283,7 +2267,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 94.615) (xy 200.025 94.615)
+			(xy 151.13 94.615) (xy 200.025 94.615)
 		)
 		(stroke
 			(width 0)
@@ -2390,16 +2374,6 @@
 			(type default)
 		)
 		(uuid "888fefb8-07bb-459c-99f6-ea6d64cb3237")
-	)
-	(wire
-		(pts
-			(xy 186.69 94.615) (xy 186.69 95.885)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ba7e889-6340-4c5f-a048-cd2a616703cf")
 	)
 	(wire
 		(pts
@@ -4987,79 +4961,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 186.69 103.505 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "abc57aa8-9ad6-460f-882a-78a23e88dd1a")
-		(property "Reference" "#PWR098"
-			(at 186.69 109.855 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 186.69 107.315 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1639acaf-32e4-4b08-9edc-5e12c4a035f1")
-		)
-		(instances
-			(project "TFG-Brushless-ESC"
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "#PWR098")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
-					(reference "#PWR066")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
-					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 60.96 113.665 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5833,99 +5734,6 @@
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_US")
-		(at 186.69 99.695 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e12df643-741f-4d3a-92c3-fa85bd6c3c26")
-		(property "Reference" "C41"
-			(at 191.135 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47u"
-			(at 191.135 100.965 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.4"
-			(at 186.69 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "C"
-			(at 186.69 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 186.69 99.695 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0f9498bc-4490-4dc6-a60e-f6513b85566b")
-		)
-		(pin "2"
-			(uuid "42b7b16f-6c7e-4625-bb16-2c315d71d6a3")
-		)
-		(instances
-			(project "TFG-Brushless-ESC"
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
-					(reference "C41")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
-					(reference "C23")
-					(unit 1)
-				)
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
-					(reference "C32")
 					(unit 1)
 				)
 			)
