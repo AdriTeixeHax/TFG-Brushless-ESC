@@ -2764,7 +2764,6 @@
 	)
 	(label "PHASE_OUT"
 		(at 81.915 94.615 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2775,7 +2774,6 @@
 	)
 	(label "Shunt"
 		(at 152.4 107.315 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2786,7 +2784,6 @@
 	)
 	(label "PHASE_OUT"
 		(at 163.83 94.615 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2798,7 +2795,6 @@
 	(hierarchical_label "LIN"
 		(shape input)
 		(at 109.22 95.885 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2810,7 +2806,6 @@
 	(hierarchical_label "I_SENSE"
 		(shape output)
 		(at 187.96 112.395 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2822,7 +2817,6 @@
 	(hierarchical_label "V_SENSE"
 		(shape output)
 		(at 210.185 104.775 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2834,7 +2828,6 @@
 	(hierarchical_label "PHASE_OUT"
 		(shape output)
 		(at 226.06 94.615 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2846,7 +2839,6 @@
 	(hierarchical_label "HIN"
 		(shape input)
 		(at 109.22 93.345 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
