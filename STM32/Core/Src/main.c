@@ -22,6 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "RTSpeed.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -37,8 +38,6 @@
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
-typedef enum {HI_U = 0, HI_V, HI_W, LO_U, LO_V, LO_W} mosfet_pins;
-
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -51,15 +50,6 @@ TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
-
-uint8_t Hall_U_State = 0;
-uint8_t Hall_V_State = 0;
-uint8_t Hall_W_State = 0;
-
-uint8_t state = 0;
-
-uint32_t speed = 256 ;
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -76,64 +66,6 @@ static void MX_TIM4_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-void PWMSet(mosfet_pins pin, uint16_t value)
-{
-    // TIM 2 Channel 3 - HI_U
-    // TIM 3 Channel 4 - LO_U
-    // TIM 3 Channel 1 - HI_V
-    // TIM 2 Channel 1 - LO_V
-    // TIM 4 Channel 2 - HI_W
-    // TIM 4 Channel 1 - LO_W
-	switch(pin)
-	{
-	case HI_U:
-		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, value);
-		break;
-	case LO_U:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, value);
-		break;
-	case HI_V:
-		__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, value);
-		break;
-	case LO_V:
-		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, value);
-		break;
-	case HI_W:
-		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_2, value);
-		break;
-	case LO_W:
-		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_1, value);
-		break;
-	default:
-		break;
-	}
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin == GPIO_PIN_8)
-  {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
-		  Hall_U_State = 1;
-	  else
-		  Hall_U_State = 0;
-  }
-  else if(GPIO_Pin == GPIO_PIN_9)
-  {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
-		  Hall_V_State = 1;
-	  else
-		  Hall_V_State = 0;
-  }
-  else if(GPIO_Pin == GPIO_PIN_10)
-  {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
-		  Hall_W_State = 1;
-	  else
-		  Hall_W_State = 0;
-  }
-}
 
 /* USER CODE END 0 */
 
@@ -181,6 +113,8 @@ int main(void)
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
 
+  HAL_ADC_Start_IT(&hadc1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -191,64 +125,6 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	// U = Yellow
-	// V = Blue
-	// W = Green
-	state = (Hall_U_State << 2) | (Hall_V_State << 1) | (Hall_W_State);
-
-	switch(state)
-	{
-	case 0b100:
-		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 0);
-		PWMSet(HI_V, speed);
-		PWMSet(LO_V, 0);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 256);
-		break;
-	case 0b110:
-		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 256);
-		PWMSet(HI_V, speed);
-		PWMSet(LO_V, 0);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 0);
-		break;
-	case 0b010:
-		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 256);
-		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 0);
-		PWMSet(HI_W, speed);
-		PWMSet(LO_W, 0);
-		break;
-	case 0b011:
-		PWMSet(HI_U, 0);
-		PWMSet(LO_U, 0);
-		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 256);
-		PWMSet(HI_W, speed);
-		PWMSet(LO_W, 0);
-		break;
-	case 0b001:
-		PWMSet(HI_U, speed);
-		PWMSet(LO_U, 0);
-		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 256);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 0);
-		break;
-	case 0b101:
-		PWMSet(HI_U, speed);
-		PWMSet(LO_U, 0);
-		PWMSet(HI_V, 0);
-		PWMSet(LO_V, 0);
-		PWMSet(HI_W, 0);
-		PWMSet(LO_W, 256);
-		break;
-	default:
-		break;
-	} // !switch
   } // !while
   /* USER CODE END 3 */
 }

@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+
+% Documento
+\begin{document}
+
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \draw (13.75,24) to[american voltage source, sources/symbol/rotate=auto,l={ \normalsize $V_\textit{p}$}] (13.75,21.25);
+    \draw (13.75,24) to[R,l={ \normalsize $R_\textit{s}$}] (15.75,24);
+    \draw (15.75,24) to[L,l={ \normalsize $L_\textit{s}$} ] (17.5,24);
+    \draw (17.5,24) to[american voltage source,l={ \normalsize $e_\textit{p}$}] (19.5,24);
+    \draw [](13.75,21.25) to[short] (19.5,21.25);
+    \draw [](19.5,24) to[short] (19.5,21.25);
+    \draw [->, >=Stealth] (19.5,22.75) -- (19.5,22.5)node[pos=0.5,left]{$I_\textit{p}$};
+\end{circuitikz}
+
+\end{document}
