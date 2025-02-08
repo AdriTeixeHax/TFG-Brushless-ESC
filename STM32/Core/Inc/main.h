@@ -59,43 +59,39 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define N_USER_LED_Pin GPIO_PIN_13
-#define N_USER_LED_GPIO_Port GPIOC
 #define I_SENSE_W_Pin GPIO_PIN_0
 #define I_SENSE_W_GPIO_Port GPIOA
 #define V_SENSE_W_Pin GPIO_PIN_1
 #define V_SENSE_W_GPIO_Port GPIOA
-#define I_SENSE_V_Pin GPIO_PIN_3
+#define LO_W_Pin GPIO_PIN_2
+#define LO_W_GPIO_Port GPIOA
+#define HI_W_Pin GPIO_PIN_3
+#define HI_W_GPIO_Port GPIOA
+#define I_SENSE_V_Pin GPIO_PIN_4
 #define I_SENSE_V_GPIO_Port GPIOA
-#define V_SENSE_V_Pin GPIO_PIN_4
+#define V_SENSE_V_Pin GPIO_PIN_5
 #define V_SENSE_V_GPIO_Port GPIOA
-#define LO_V_Pin GPIO_PIN_5
+#define LO_V_Pin GPIO_PIN_6
 #define LO_V_GPIO_Port GPIOA
-#define HI_V_Pin GPIO_PIN_6
+#define HI_V_Pin GPIO_PIN_7
 #define HI_V_GPIO_Port GPIOA
-#define I_SENSE_U_Pin GPIO_PIN_7
-#define I_SENSE_U_GPIO_Port GPIOA
-#define V_SENSE_U_Pin GPIO_PIN_0
+#define I_SENSE_U_Pin GPIO_PIN_0
+#define I_SENSE_U_GPIO_Port GPIOB
+#define V_SENSE_U_Pin GPIO_PIN_1
 #define V_SENSE_U_GPIO_Port GPIOB
-#define LO_U_Pin GPIO_PIN_1
-#define LO_U_GPIO_Port GPIOB
-#define HI_U_Pin GPIO_PIN_10
-#define HI_U_GPIO_Port GPIOB
-#define HALL_U_Pin GPIO_PIN_8
-#define HALL_U_GPIO_Port GPIOA
+#define LO_U_Pin GPIO_PIN_8
+#define LO_U_GPIO_Port GPIOA
+#define HI_U_Pin GPIO_PIN_9
+#define HI_U_GPIO_Port GPIOA
+#define N_USER_LED_Pin GPIO_PIN_15
+#define N_USER_LED_GPIO_Port GPIOA
+#define HALL_W_Pin GPIO_PIN_3
+#define HALL_W_GPIO_Port GPIOB
+#define HALL_V_Pin GPIO_PIN_4
+#define HALL_V_GPIO_Port GPIOB
+#define HALL_U_Pin GPIO_PIN_5
+#define HALL_U_GPIO_Port GPIOB
 #define HALL_U_EXTI_IRQn EXTI9_5_IRQn
-#define HALL_V_Pin GPIO_PIN_9
-#define HALL_V_GPIO_Port GPIOA
-#define HALL_V_EXTI_IRQn EXTI9_5_IRQn
-#define HALL_W_Pin GPIO_PIN_10
-#define HALL_W_GPIO_Port GPIOA
-#define HALL_W_EXTI_IRQn EXTI15_10_IRQn
-#define N_USER_LEDA15_Pin GPIO_PIN_15
-#define N_USER_LEDA15_GPIO_Port GPIOA
-#define LO_W_Pin GPIO_PIN_6
-#define LO_W_GPIO_Port GPIOB
-#define HI_W_Pin GPIO_PIN_7
-#define HI_W_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
