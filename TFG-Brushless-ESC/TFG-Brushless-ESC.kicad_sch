@@ -9349,7 +9349,7 @@
 		)
 		(uuid "108cad96-7be5-46cd-b3dc-1c82509664c8")
 	)
-	(label "PB10"
+	(label "PA9"
 		(at 203.2 78.105 0)
 		(effects
 			(font
@@ -9379,7 +9379,7 @@
 		)
 		(uuid "1e181be3-9823-48b2-b8b6-853b1d387014")
 	)
-	(label "PA9"
+	(label "PB4"
 		(at 232.41 128.27 0)
 		(effects
 			(font
@@ -9419,7 +9419,7 @@
 		)
 		(uuid "2b7c96ae-1487-4bfc-a04e-e4771ccdc8ff")
 	)
-	(label "PA3"
+	(label "PA4"
 		(at 203.2 99.06 0)
 		(effects
 			(font
@@ -9429,7 +9429,7 @@
 		)
 		(uuid "2c200745-cd7b-4bc7-b032-b11fac7826a7")
 	)
-	(label "PB0"
+	(label "PB1"
 		(at 203.2 85.725 0)
 		(effects
 			(font
@@ -9439,7 +9439,7 @@
 		)
 		(uuid "2ef46e2d-a4d8-4912-9408-6d5ec3382fee")
 	)
-	(label "PA4"
+	(label "PA5"
 		(at 203.2 101.6 0)
 		(effects
 			(font
@@ -9479,7 +9479,7 @@
 		)
 		(uuid "3e422552-7fa4-4396-8785-bcd4ae64bb22")
 	)
-	(label "PA10"
+	(label "PB5"
 		(at 232.41 125.73 0)
 		(effects
 			(font
@@ -9489,7 +9489,7 @@
 		)
 		(uuid "4155fb94-fe3a-4dc9-971a-e0dd8baf4df6")
 	)
-	(label "PA5"
+	(label "PA6"
 		(at 203.2 96.52 0)
 		(effects
 			(font
@@ -9599,7 +9599,7 @@
 		)
 		(uuid "65838746-df49-48af-927a-3984861d975c")
 	)
-	(label "PA6"
+	(label "PA7"
 		(at 203.2 93.98 0)
 		(effects
 			(font
@@ -9639,7 +9639,7 @@
 		)
 		(uuid "732230f0-6a22-4510-85c2-36d5c582d81c")
 	)
-	(label "PB1"
+	(label "PA8"
 		(at 203.2 80.645 0)
 		(effects
 			(font
@@ -9759,7 +9759,7 @@
 		)
 		(uuid "9e81b9cc-af2c-4a42-bace-8e0cfd671bae")
 	)
-	(label "PB7"
+	(label "PA3"
 		(at 203.2 109.855 0)
 		(effects
 			(font
@@ -9999,7 +9999,7 @@
 		)
 		(uuid "e286652f-c86e-4e9f-9d9e-7bedb309b0fb")
 	)
-	(label "PA7"
+	(label "PB0"
 		(at 203.2 83.185 0)
 		(effects
 			(font
@@ -10009,7 +10009,7 @@
 		)
 		(uuid "e2a037d7-7896-47ab-94f3-5910f7f7bfac")
 	)
-	(label "PA8"
+	(label "PB3"
 		(at 232.41 130.81 0)
 		(effects
 			(font
@@ -10029,7 +10029,7 @@
 		)
 		(uuid "e80068e0-8cd2-40d8-9a56-ebf7c7279ddf")
 	)
-	(label "PB6"
+	(label "PA2"
 		(at 203.2 112.395 0)
 		(effects
 			(font
@@ -10124,75 +10124,6 @@
 			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 56.515 184.15 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "02638438-e6fe-493e-9db9-334c768b7cca")
-		(property "Reference" "J5"
-			(at 53.975 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "24V IN"
-			(at 53.975 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
-			(at 56.515 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 56.515 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 56.515 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f1d9ba63-a49c-4f9b-a375-5ec7fb02aa94")
-		)
-		(pin "1"
-			(uuid "fa36038f-63a9-4164-b563-7fe626397ce0")
-		)
-		(instances
-			(project ""
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -17617,6 +17548,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 56.515 181.61 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c22ccb76-60ea-4abf-955b-7bab1f06de47")
+		(property "Reference" "J5"
+			(at 53.975 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "24V IN"
+			(at 53.975 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "251b272b-649e-4168-9d76-322a53ed0e0c")
+		)
+		(pin "1"
+			(uuid "0d3807c7-3ce1-4e8e-944d-2dbf2e3fd653")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Schottky_AKA")
 		(at 94.615 181.61 0)
 		(mirror y)
@@ -17634,7 +17635,7 @@
 				)
 			)
 		)
-		(property "Value" "FERD30H100SB"
+		(property "Value" "STPS30100ST"
 			(at 94.615 175.895 0)
 			(effects
 				(font
@@ -17642,7 +17643,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-252-2"
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 			(at 94.615 181.61 0)
 			(effects
 				(font
@@ -17651,7 +17652,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121846_Vishay-Intertech-VF30100S-E3-4W_C3759118.pdf"
 			(at 94.615 181.61 0)
 			(effects
 				(font

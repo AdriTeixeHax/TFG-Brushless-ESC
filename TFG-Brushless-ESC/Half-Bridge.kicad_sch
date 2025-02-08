@@ -2782,6 +2782,16 @@
 		)
 		(uuid "2ac3dd53-aabe-49aa-a964-781198b3d3cf")
 	)
+	(label "VB"
+		(at 125.095 85.725 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4cbc600b-34df-4e45-9ecc-c135ab31d4bd")
+	)
 	(label "PHASE_OUT"
 		(at 163.83 94.615 0)
 		(effects
