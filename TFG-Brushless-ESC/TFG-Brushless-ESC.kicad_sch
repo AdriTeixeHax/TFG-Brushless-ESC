@@ -964,22 +964,22 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_01x04"
+		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 0 5.08 0)
+				(at 0 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1004,7 +1004,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1031,18 +1031,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "Conn_01x02_1_1"
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
@@ -1066,19 +1055,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1088,7 +1066,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -1106,7 +1084,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -1116,42 +1094,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6135,12 +6077,6 @@
 		(uuid "16cee7d7-089d-4395-993e-f6c44efc3a8c")
 	)
 	(junction
-		(at 60.325 181.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1c92d25a-4496-4e29-8140-46fd16602215")
-	)
-	(junction
 		(at 62.865 26.035)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6319,12 +6255,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b9a60955-4ac0-4632-bf31-92a03dd8327d")
-	)
-	(junction
-		(at 60.325 186.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b9d544a0-d02d-43f6-8671-256efd62dc9b")
 	)
 	(junction
 		(at 34.29 122.555)
@@ -6642,7 +6572,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.325 186.69) (xy 60.325 190.5)
+			(xy 62.865 184.15) (xy 62.865 190.5)
 		)
 		(stroke
 			(width 0)
@@ -6972,7 +6902,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 184.15) (xy 60.325 184.15)
+			(xy 61.595 184.15) (xy 62.865 184.15)
 		)
 		(stroke
 			(width 0)
@@ -7009,16 +6939,6 @@
 			(type default)
 		)
 		(uuid "2dcb0a8a-b9e6-494c-b3b9-424b1cdb189a")
-	)
-	(wire
-		(pts
-			(xy 60.325 186.69) (xy 60.325 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e8fd83d-a0c5-471f-90a1-90966a990393")
 	)
 	(wire
 		(pts
@@ -7852,7 +7772,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 181.61) (xy 60.325 181.61)
+			(xy 61.595 181.61) (xy 67.31 181.61)
 		)
 		(stroke
 			(width 0)
@@ -8362,16 +8282,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.325 179.07) (xy 60.325 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abbcbe99-ee86-4214-a4b1-db92076219f0")
-	)
-	(wire
-		(pts
 			(xy 237.49 130.81) (xy 237.49 136.525)
 		)
 		(stroke
@@ -8492,16 +8402,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 186.69) (xy 60.325 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8d5fe4c-c7fe-4b84-be67-3eff0634bc43")
-	)
-	(wire
-		(pts
 			(xy 95.25 26.035) (xy 95.25 27.305)
 		)
 		(stroke
@@ -8619,16 +8519,6 @@
 			(type default)
 		)
 		(uuid "c08d49f1-b4fd-488b-8ef6-e82147cac5c1")
-	)
-	(wire
-		(pts
-			(xy 60.325 181.61) (xy 67.31 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0968a1b-4b11-4cae-b415-6da5bd13745e")
 	)
 	(wire
 		(pts
@@ -8839,16 +8729,6 @@
 			(type dash)
 		)
 		(uuid "d25b7f45-1071-4aed-8cc6-56c155763719")
-	)
-	(wire
-		(pts
-			(xy 59.055 179.07) (xy 60.325 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4664dc2-30ab-4fce-b7c6-3f7a693c94a8")
 	)
 	(wire
 		(pts
@@ -9261,7 +9141,7 @@
 		(uuid "ff4ba7ab-7518-4f4b-874a-d060cb532a54")
 	)
 	(rectangle
-		(start 45.085 171.45)
+		(start 46.99 171.45)
 		(end 158.75 196.215)
 		(stroke
 			(width 0)
@@ -9353,7 +9233,7 @@
 	)
 	(text "Connector protections"
 		(exclude_from_sim no)
-		(at 45.085 171.45 0)
+		(at 46.99 171.45 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -10178,79 +10058,6 @@
 			(justify right bottom)
 		)
 		(uuid "f8ed7952-2cb4-497a-9a84-55c6f5f3ed1a")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 53.975 184.15 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "006943a8-b5ba-4b36-91e5-3c7928efd13b")
-		(property "Reference" "J8"
-			(at 48.895 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "24V IN"
-			(at 48.895 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_4-G-5,08_1x04_P5.08mm_Horizontal"
-			(at 53.975 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2408130957_Ningbo-Kangnex-Elec-WJ2EDGRC-5-08-4P_C8446.pdf"
-			(at 53.975 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "C8446"
-			(at 53.975 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "595b3da6-4499-45c3-a578-dfc2edaed439")
-		)
-		(pin "3"
-			(uuid "6a2a9e28-90dc-4f9d-b436-76de9767227b")
-		)
-		(pin "2"
-			(uuid "9fbb8a06-32c8-4fd6-8495-f7414c07a734")
-		)
-		(pin "4"
-			(uuid "dd4c0433-a219-4980-9cbb-a0a1a7e43a98")
-		)
-		(instances
-			(project ""
-				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R_US")
@@ -11401,7 +11208,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 60.325 190.5 0)
+		(at 62.865 190.5 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11410,7 +11217,7 @@
 		(dnp no)
 		(uuid "1c92e17d-e409-4975-8a35-e077c4850713")
 		(property "Reference" "#PWR054"
-			(at 60.325 196.85 0)
+			(at 62.865 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11419,7 +11226,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 60.325 194.31 0)
+			(at 62.865 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11427,7 +11234,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.325 190.5 0)
+			(at 62.865 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11436,7 +11243,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.325 190.5 0)
+			(at 62.865 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11445,7 +11252,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 60.325 190.5 0)
+			(at 62.865 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17735,6 +17542,76 @@
 			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 56.515 181.61 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c22ccb76-60ea-4abf-955b-7bab1f06de47")
+		(property "Reference" "J5"
+			(at 53.975 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "24V IN"
+			(at 53.975 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2408130957_Ningbo-Kangnex-Elec-WJ2EDGRC-5-08-2P_C3697.pdf"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "C3697"
+			(at 56.515 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "251b272b-649e-4168-9d76-322a53ed0e0c")
+		)
+		(pin "1"
+			(uuid "0d3807c7-3ce1-4e8e-944d-2dbf2e3fd653")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
+					(reference "J5")
 					(unit 1)
 				)
 			)
