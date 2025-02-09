@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "TFG-Brushless-ESC")(type "KiCad")(uri "${KIPRJMOD}/TFG-Brushless-ESC.pretty")(options "")(descr ""))
+)

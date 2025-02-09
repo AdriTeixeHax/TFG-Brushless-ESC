@@ -1,0 +1,61 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+
+% Documento
+\begin{document}
+
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \ctikzset{bipoles/diode/height=0.3, bipoles/diode/width=0.3,}
+    \ctikzset{tripoles/mos style/arrows}
+    \def\killdepth#1{{\raisebox{0pt}[\height][0pt]{#1}}}
+    \draw (0,0) node[nigfete, solderdot](Q1){\killdepth{$M2$}};
+    \draw (0,3) node[nigfete, solderdot](Q1){\killdepth{$M1$}};
+    \draw (2,0) node[nigfete, solderdot](Q1){\killdepth{$M4$}};
+    \draw (2,3) node[nigfete, solderdot](Q1){\killdepth{$M3$}};
+    \draw (4,0) node[nigfete, solderdot](Q1){\killdepth{$M6$}};
+    \draw (4,3) node[nigfete, solderdot](Q1){\killdepth{$M5$}};
+    \node at (0,-0.775) [circ] {};
+    \node at (2,-0.775) [circ] {};
+    \node at (0,3.775) [circ] {};
+    \node at (2,3.775) [circ] {};
+
+    \draw (4,3.775) -- (-2,3.775);
+    \draw (4,-0.775) -- (-2,-0.775);
+
+    \draw (-2,3.775) to[battery2] (-2,-0.775);
+    \node [font=\normalsize] at (-1.75,1.75) {+};
+
+    \draw (0,2.25) -- (0,0.75);
+    \draw (2,2.25) -- (2,0.75);
+    \draw (4,2.25) -- (4,0.75);
+    \node at (0,2.25) [circ] {};
+    \node at (2,1.5) [circ] {};
+    \node at (4,0.75) [circ] {};
+
+    \draw (0,2.25) to[short] (4,2.25);
+    \draw (2,1.5) to[short] (4,1.5);
+
+    \draw (4,2.25) to[L, l={\small $L_\textit{A}$}] (6.25,2.25);
+    \draw (4,1.5) to[L, l={\small $L_\textit{B}$}] (6.25,1.5);
+    \draw (4,0.75) to[L, l={\small $L_\textit{C}$}] (6.25,0.75);
+    \draw (6.25,2.25) -- (6.25,0.75);
+    \node at (6.25,1.5) [circ] {};
+\end{circuitikz}
+
+\end{document}

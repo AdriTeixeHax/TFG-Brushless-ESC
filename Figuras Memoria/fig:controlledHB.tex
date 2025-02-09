@@ -1,0 +1,76 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+
+% Documento
+\begin{document}
+
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \ctikzset{bipoles/diode/height=0.3, bipoles/diode/width=0.3,}
+    \ctikzset{tripoles/mos style/arrows}
+    \def\killdepth#1{{\raisebox{0pt}[\height][0pt]{#1}}}
+    \draw  (10.75,22.5) rectangle (13.25,19);
+    \draw (12,23) to[D,l={$D_{\textit{boot}}$}] (14,23);
+    \draw (12,19) to (12,18.75) node[ground]{};
+    \draw (14,21.5) to[curved capacitor,l={ \normalsize $C_{\textit{boot}}$}] (14,20);
+    \node [font=\normalsize] at (14.25,21.125) {+};
+    \draw (13.25,22) to[short] (14,22);
+    \draw (13.25,19.5) to[short] (14.75,19.5);
+    \draw (13.25,20) to[short] (15.5,20);
+    \draw (13.25,21.5) to[short] (14.75,21.5);
+    \draw (14,22) to[short] (14,21.5);
+    \node at (14,22) [circ] {};
+    \node at (14,20) [circ] {};
+    \draw (14,23) to[short] (14,22);
+    \draw (12,22.5) -- (12,23)node[vcc]{$\textit{VCC}$};
+    \node at (12,23) [circ] {};
+    \node [font=\normalsize, rotate around={90:(0,0)}] at (12,19.5) {\textit{COM}};
+    \node [font=\normalsize] at (12.75,19.5) {\textit{LO}};
+    \node [font=\normalsize] at (12.75,20) {\textit{VS}};
+    \node [font=\normalsize] at (12.75,21.5) {\textit{HO}};
+    \node [font=\normalsize] at (12.75,22) {\textit{VB}};
+    \draw [short] (10.75,21) -- (10.5,21)node[pos=0,right]{\textit{HIN}};
+    \draw [short] (10.75,20.5) -- (10.5,20.5)node[pos=0,right]{\textit{LIN}};
+    \draw (14.75,21.5) to[R,l={ \normalsize $R_{\textit{G}_\textit{H}}$}] (17.025,21.5);
+    \draw (17.025,19.5) to[R,l={ \normalsize $R_{\textit{G}_\textit{L}}$}] (14.75,19.5);
+    \draw (17,20.75) to[short] (18,20.75);
+    \draw (15.5,20) to[short] (15.85,20);
+    \draw (15.85,20) to[short] (15.85,20.75);
+    \draw (15.85,20.75) to[short] (17,20.75);
+    \node at (18,20.75) [circ] {};
+    \draw (18,20.75) -- (20,20.75)node[vcc, rotate=-90]{\rotatebox{90}{$\!\!\!V_{\textit{fase}}$}};
+    \draw [->, >=Stealth] (10,21) -- (10.5,21)node[pos=0,left]{$\text{\textit{PWM}}_\textit{H}$};
+    \draw [->, >=Stealth] (10,20.5) -- (10.5,20.5)node[pos=0,left]{$\text{\textit{PWM}}_\textit{L}$};
+    \draw (18,21.77) node[nigfete, solderdot](Q1){\killdepth{$M_\textit{H}$}};
+    \draw (18,19.77) node[nigfete, solderdot](Q1){\killdepth{$M_\textit{L}$}};
+    \draw (18,19) to (18,18.75) node[ground]{};
+    \draw (18,22.5) -- (18,23)node[vcc]{$\textit{VDD}$};
+    \draw (18,21) to[short] (18,20.5);
+    \node [font=\small] at (11.25,22.3) {\textit{Driver}};
+    \draw (19.5,22.5) to[curved capacitor, l={$C_{\textit{F}_\textit{H}}$}] (19.5,20.75);
+    \draw (19.5,20.75) to[curved capacitor, l={$C_{\textit{F}_\textit{L}}$}] (19.5,19);
+    \node [font=\normalsize] at (19.75,22) {+};
+    \node [font=\normalsize] at (19.75,20.25) {+};
+    \draw (19.5,19) -- (18,19);
+    \node at (18,19) [circ] {};
+    \draw (19.5,22.5) -- (18,22.5);
+    \node at (18,22.5) [circ] {};
+    \node at (19.5,20.75) [circ] {};
+\end{circuitikz}
+
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+\usepackage{pgf}
+\usepackage{pgfplots}
+
+% Documento
+\begin{document}
+\begin{circuitikz}
+  \tikzstyle{every node}=[font=\normalsize]
+  \ctikzset{diodes/scale=0.7};
+  \draw  (20.25,20.25) rectangle  node {\normalsize 1/2 Puente A} (22.5,19.25);
+  \draw  (20.25,19) rectangle  node {\normalsize 1/2 Puente B} (22.5,18);
+  \draw  (20.25,17.75) rectangle  node {\normalsize 1/2 Puente C} (22.5,16.75);
+  \draw [->, >=Stealth] (19.5,20) -- (20.25,20);
+  \draw [->, >=Stealth] (19.5,19.5) -- (20.25,19.5);
+  \draw [->, >=Stealth] (19.5,18.75) -- (20.25,18.75);
+  \draw [->, >=Stealth] (19.5,18.25) -- (20.25,18.25);
+  \draw [->, >=Stealth] (19.5,17.5) -- (20.25,17.5);
+  \draw [->, >=Stealth] (19.5,17) -- (20.25,17);
+  \draw  (16,20.25) rectangle  node {\normalsize Microcontrolador} (19.5,11.5);
+  \draw [->, >=Stealth] (23,16) -- (19.5,16)node[pos=1,above]{$\qquad \quad V_\textit{A}$};
+  \draw [->, >=Stealth] (23.5,15.5) -- (19.5,15.5)node[pos=1,above]{$\qquad \quad I_\textit{A}$};
+  \draw [->, >=Stealth] (24,15) -- (19.5,15)node[pos=1,above]{$\qquad \quad V_\textit{B}$};
+  \draw [short] (23,17.25) -- (23,16);
+  \draw [short] (24,18.5) -- (24,15);
+  \draw [->, >=Stealth] (26.25,12.75) -- (19.5,12.75)node[pos=1,above]{\qquad \qquad \quad Hall A};
+  \draw [->, >=Stealth] (26.75,12.25) -- (19.5,12.25)node[pos=1,above]{\qquad \qquad \quad \!\! Hall B};
+  \draw [->, >=Stealth] (27.25,11.75) -- (19.5,11.75)node[pos=1,above]{\qquad \qquad \quad Hall C};
+  \draw  (14.25,20.25) rectangle  node {\normalsize USB} (15.25,19.25);
+  \draw  (12.5,20.25) rectangle  node {\normalsize PC} (13.5,19.25);
+  \draw  (26,20.25) rectangle  node {\normalsize PMSM} (27.5,16.75);
+  \node at (23,17.25) [circ] {};
+  \node at (24,18.5) [circ] {};
+  \node at (25,19.75) [circ] {};
+  \draw [->, >=Stealth] (22.5,19.75) -- (26,19.75);
+  \draw [->, >=Stealth] (22.5,18.5) -- (26,18.5);
+  \draw [->, >=Stealth] (22.5,17.25) -- (26,17.25);
+  \draw [short] (26.25,16.75) -- (26.25,12.75);
+  \draw [short] (26.75,16.75) -- (26.75,12.25);
+  \draw [short] (27.25,16.75) -- (27.25,11.75);
+  \draw [->, >=Stealth] (20.75,21.25) -- (20.75,20.5)node[pos=0,above]{$+12\,\textit{V}$};
+  \draw [->, >=Stealth] (22,21.25) -- (22,20.5)node[pos=0,above]{$+24\,\textit{V}$};
+  \draw [->, >=Stealth] (14.75,20.25) -- (14.75,21)node[pos=1,above]{$+5\,\textit{V}$};
+  \draw  (17,23.25) rectangle  node {\normalsize LDO} (18,22.25);
+  \draw [->, >=Stealth] (17.75,21) -- (17.75,20.25)node[pos=0,above]{$+3.3\,\textit{V}$};
+  \draw [short] (24.5,18.25) -- (24.5,14.5);
+  \draw [short] (25,19.75) -- (25,14);
+  \draw [short] (25.5,19.5) -- (25.5,13.5);
+  \draw [short] (23.5,17) -- (23.5,15.5);
+  \draw [->, >=Stealth] (24.5,14.5) -- (19.5,14.5)node[pos=1,above]{$\qquad \quad I_\textit{B}$};
+  \draw [->, >=Stealth] (25,14) -- (19.5,14)node[pos=1,above]{$\qquad \quad V_\textit{C}$};
+  \draw [->, >=Stealth] (25.5,13.5) -- (19.5,13.5)node[pos=1,above]{$\qquad \quad I_\textit{C}$};
+  \draw  (14.25,13.75) rectangle  node {\normalsize HSE} (15.25,12.75);
+  \draw  (14.25,12.5) rectangle  node {\normalsize LSE} (15.25,11.5);
+  \draw [->, >=Stealth] (15.25,13.5) -- (16,13.5);
+  \draw [->, >=Stealth] (15.25,13) -- (16,13);
+  \draw [->, >=Stealth] (15.25,12.25) -- (16,12.25);
+  \draw [->, >=Stealth] (15.25,11.75) -- (16,11.75);
+  \draw  (14.25,19) rectangle  node {\normalsize SWD} (15.25,18);
+  \draw [->, >=Stealth] (15.25,18.75) -- (16,18.75);
+  \draw [->, >=Stealth] (16,18.25) -- (15.25,18.25);
+  \draw [->, >=Stealth] (16,18.25) -- (15.25,18.25);
+  \draw [->, >=Stealth] (15.25,20) -- (16,20);
+  \draw [->, >=Stealth] (16,19.5) -- (15.25,19.5);
+  \draw [->, >=Stealth] (13.5,19.75) -- (14.25,19.75);
+  \draw [->, >=Stealth] (13.5,18.5) -- (14.25,18.5)node[pos=0,left]{$+3.3\,\textit{V}$};
+  \draw [->, >=Stealth] (16.25,22.75) -- (17,22.75)node[pos=0,left]{$+5\,\textit{V}$};
+  \draw [->, >=Stealth] (18,22.75) -- (18.75,22.75)node[pos=1,right]{$+3.3\,\textit{V}$};
+  \draw  (22.25,23.25) rectangle  node {\normalsize LDO} (23.25,22.25);
+  \draw [->, >=Stealth] (21.5,22.75) -- (22.25,22.75)node[pos=0,left]{$+24\,\textit{V}$};
+  \draw [->, >=Stealth] (23.25,22.75) -- (24,22.75)node[pos=1,right]{$+12\,\textit{V}$};
+  \draw [ dashed] (20,20.5) rectangle  (22.75,16.5);
+  \draw [->, >=Stealth] (16,17.25) -- (15.25,17.25);
+  \draw (14.25,17.25) to[empty led] (15.25,17.25);
+  \draw (14.25,15.75) to[push button,l={ \normalsize BOOT}] (15.25,15.75);
+  \draw (14.25,14.25) to[push button,l={ \normalsize N\_RST}] (15.25,14.25);
+  \draw [->, >=Stealth] (15.25,15.75) -- (16,15.75);
+  \draw [->, >=Stealth] (15.25,14.25) -- (16,14.25);
+  \draw  (23.5,17.25) ellipse (0.125cm and 0.25cm);
+  \draw  (24.5,18.5) ellipse (0.125cm and 0.25cm);
+  \draw  (25.5,19.75) ellipse (0.125cm and 0.25cm);
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+
+% Documento
+\begin{document}
+
+\begin{circuitikz}
+    \tikzstyle{every node}=[font=\normalsize]
+    \ctikzset{tripoles/mos style/arrows};
+    \draw  (13.5,16.5) rectangle  node {\normalsize P} (18.5,15.25);
+    \draw  (13.75,16.5) rectangle  node {\normalsize N} (14.5,16);
+    \draw  (17.5,16.5) rectangle  node {\normalsize N} (18.25,16);
+    \draw  (14.5,17) rectangle  node {\normalsize Óxido} (17.5,16.5);
+    \draw [->, >=Stealth] (15,14.75) -- (15,16.325)node[pos=0,below]{Canal N};
+    \draw (14.125,16.5) to[short, -o] (14.125,17.25) node[left] {Fuente (S)};
+    \draw [](17.875,16.5) to[short, -o] (17.875,17.25) node[right] {Drenador (D)};
+    \draw [](16,17) to[short, -o] (16,17.5) node[above] {Puerta (G)};
+    \draw [short] (14.5,16.25) -- (17.5,16.25);
+    \draw (17,14.75) -- (17,15.25) node[pos=0, below]{Cuerpo (B)};
+    \draw (17,14.75) to[short, o-] (17,15.25);
+    \draw (22,16) node[nigfete, solderdot, tr circle](Q1){};
+    \node at (21,15.5) {G};
+    \node at (22.25,15.25) {S};
+    \node at (22.25,16.75) {D};
+\end{circuitikz}
+
+\end{document}

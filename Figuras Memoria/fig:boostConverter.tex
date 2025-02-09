@@ -1,0 +1,38 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{color,pxfonts,fix-cm}
+\usepackage{latexsym}
+\usepackage{helvet}
+\usepackage{lmodern}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{tgpagella}
+\usepackage{pict2e}
+\usepackage{wasysym}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\pagestyle{empty}
+\usepackage[margin=1in]{geometry}
+
+% Documento
+\begin{document}
+
+\begin{circuitikz}
+    \ctikzset{bipoles/diode/height=0.3, bipoles/diode/width=0.3,}
+    \ctikzset{tripoles/mos style/arrows}
+    \draw (0,1) to[american voltage source] (0,-1) coordinate(pt0);
+    \draw (0,1) to[L, -*, l={$L$}] ++(2,0) coordinate(pt1);
+    \draw (pt1) to[D, -*, l={$D$}] ++(2,0) coordinate(pt2);
+    \draw (pt2) to[curved capacitor, l={$C$}] ++(0,-2) coordinate(pt3);
+    \draw (pt3) -- (0,-1);
+    \draw (pt1) -- ++(0,-0.25) node[nigfete, solderdot, anchor=D](M1){$\,SW$};
+    \draw (M1.S) -- (M1.S |- pt0) node[circ]{};
+    \draw (pt2) -- ++(1.5,0) coordinate(pt4);
+    \draw (pt4) to[R, l={$R_{\textit{load}}$}] ++(0,-2) -- (pt0 -| pt2) node[circ]{};
+    \node at (0.3,1.25) {+};
+    \node at (4.25,0.4) {+};
+\end{circuitikz}
+
+\end{document}
