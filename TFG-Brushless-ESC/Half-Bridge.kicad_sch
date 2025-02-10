@@ -189,6 +189,140 @@
 				)
 			)
 		)
+		(symbol "Connector:Screw_Terminal_01x01"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x01"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x01_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -1932,6 +2066,12 @@
 		)
 	)
 	(junction
+		(at 187.96 94.615)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0052604e-ffc1-44f8-a47b-b2da28d87a90")
+	)
+	(junction
 		(at 200.025 104.775)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2267,7 +2407,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 94.615) (xy 200.025 94.615)
+			(xy 151.13 94.615) (xy 187.96 94.615)
 		)
 		(stroke
 			(width 0)
@@ -2364,6 +2504,16 @@
 			(type default)
 		)
 		(uuid "83ba726c-6be0-4751-9ab9-738736d568da")
+	)
+	(wire
+		(pts
+			(xy 187.96 95.885) (xy 187.96 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84a79925-922a-427f-9c1b-f33fd5837f5e")
 	)
 	(wire
 		(pts
@@ -2467,7 +2617,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 94.615) (xy 226.06 94.615)
+			(xy 223.52 94.615) (xy 224.79 94.615)
 		)
 		(stroke
 			(width 0)
@@ -2544,6 +2694,16 @@
 			(type default)
 		)
 		(uuid "c6c7f03a-e44f-46df-8d07-693fd95660b6")
+	)
+	(wire
+		(pts
+			(xy 187.96 94.615) (xy 200.025 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d073d757-1eb7-4488-9cde-10fdfbf13232")
 	)
 	(wire
 		(pts
@@ -2834,17 +2994,6 @@
 			(justify left)
 		)
 		(uuid "9535b39d-03d5-4f1a-99d6-47ef67a53e6c")
-	)
-	(hierarchical_label "PHASE_OUT"
-		(shape output)
-		(at 226.06 94.615 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c50fe140-07fb-4690-9e20-5680da3310b3")
 	)
 	(hierarchical_label "HIN"
 		(shape input)
@@ -4628,6 +4777,79 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 187.96 103.505 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f7b6999-b885-4dde-acae-e8c81b09f0c4")
+		(property "Reference" "#PWR0118"
+			(at 187.96 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 187.96 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9d82af63-3237-4677-9248-a171f501e143")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "#PWR0120")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "#PWR0118")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "#PWR0119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 181.61 112.395 90)
 		(unit 1)
@@ -4956,6 +5178,89 @@
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "#PWR086")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 229.87 94.615 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b82438f7-4a9d-46d2-91bd-d6a51ab31f1a")
+		(property "Reference" "J6"
+			(at 231.775 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 234.95 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TFG-Brushless-ESC:Screw_Terminal"
+			(at 229.87 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411131354_XFCN-T44001_C481447.pdf"
+			(at 229.87 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 229.87 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC part" "C481447"
+			(at 229.87 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da26bf48-41e2-453e-bfb2-6dc15facc23d")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "J9")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "J6")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -5623,6 +5928,83 @@
 				)
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
 					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 187.96 99.695 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "deb34a5b-0e58-4cd0-a5a3-d90128f212b8")
+		(property "Reference" "R42"
+			(at 189.865 100.965 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 189.865 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 186.944 99.441 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 99.695 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "08a7cd86-c5ab-4e9f-9e48-cfefe2f75abb")
+		)
+		(pin "2"
+			(uuid "6724151b-2696-4e9f-ae39-df4d77b3acbc")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/211b6883-96c8-42a2-bec5-a4dfd4e56ba6"
+					(reference "R51")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/b5458e57-2ddd-4d30-9620-d640c1a391c8"
+					(reference "R42")
+					(unit 1)
+				)
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd/f6e668ab-a50d-4861-bee8-58a57ed6fcc7"
+					(reference "R50")
 					(unit 1)
 				)
 			)

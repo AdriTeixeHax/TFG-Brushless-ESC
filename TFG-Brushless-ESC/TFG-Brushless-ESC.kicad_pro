@@ -600,6 +600,18 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Holder datasheet",
+          "name": "Holder datasheet",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC part",
+          "name": "LCSC part",
+          "show": false
         }
       ],
       "filter_string": "",
