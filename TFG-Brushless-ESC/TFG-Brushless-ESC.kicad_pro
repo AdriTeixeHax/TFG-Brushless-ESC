@@ -683,6 +683,10 @@
     [
       "211b6883-96c8-42a2-bec5-a4dfd4e56ba6",
       "Half-Bridge-W"
+    ],
+    [
+      "42385033-5ee5-4d54-a79b-3405145cbb70",
+      "Temp. sensors"
     ]
   ],
   "text_variables": {}
