@@ -6883,6 +6883,12 @@
 		(uuid "89cf4ffc-64ab-48a1-8e4e-4863b0606c4a")
 	)
 	(junction
+		(at 155.575 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a241626-eb43-4d88-b721-c3665d985895")
+	)
+	(junction
 		(at 88.265 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7343,6 +7349,16 @@
 			(type default)
 		)
 		(uuid "19a80b7a-e7fb-41a6-aa54-aaa7348c1bed")
+	)
+	(wire
+		(pts
+			(xy 155.575 149.86) (xy 155.575 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a5d75f5-b5b1-4e74-b0b7-677a6e0bb6bc")
 	)
 	(wire
 		(pts
@@ -8053,6 +8069,16 @@
 			(type default)
 		)
 		(uuid "5c4e0a5b-6943-4e06-bb64-da2836589f04")
+	)
+	(wire
+		(pts
+			(xy 155.575 149.86) (xy 156.845 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c55c6fa-d7da-46ad-b5b5-ae83908aea30")
 	)
 	(wire
 		(pts
@@ -9906,7 +9932,7 @@
 	)
 	(rectangle
 		(start 149.86 130.81)
-		(end 182.88 160.655)
+		(end 184.15 164.465)
 		(stroke
 			(width 0)
 			(type dash)
@@ -10085,7 +10111,7 @@
 		)
 		(uuid "c6affec9-ccf2-4f12-9905-0d688cf03ff8")
 	)
-	(text "Temperature sensor"
+	(text "Temperature sensors"
 		(exclude_from_sim no)
 		(at 200.66 110.49 0)
 		(effects
@@ -12076,7 +12102,7 @@
 	(symbol
 		(lib_name "+5V_1")
 		(lib_id "power:+5V")
-		(at 170.815 137.16 0)
+		(at 172.085 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12084,7 +12110,7 @@
 		(dnp no)
 		(uuid "1bad5cb5-ad01-466c-89f8-1ce0d89c0cc9")
 		(property "Reference" "#PWR0107"
-			(at 170.815 140.97 0)
+			(at 172.085 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12093,7 +12119,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 170.815 133.35 0)
+			(at 172.085 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12101,7 +12127,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 170.815 137.16 0)
+			(at 172.085 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12110,7 +12136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.815 137.16 0)
+			(at 172.085 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12119,7 +12145,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 170.815 137.16 0)
+			(at 172.085 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12330,6 +12356,71 @@
 			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 155.575 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1f3c6bd4-dc57-4ab5-8e19-5a6b54ea8fc1")
+		(property "Reference" "#PWR0131"
+			(at 155.575 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 155.575 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 155.575 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 155.575 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 155.575 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69c1397e-4ee7-4cbc-b4f2-3889c6b91742")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -12725,6 +12816,75 @@
 			(project "TFG-Brushless-ESC"
 				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
 					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 155.575 154.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3248e85b-ef18-4e36-a6b5-f1aa55d454fb")
+		(property "Reference" "R66"
+			(at 157.48 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 157.48 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 154.559 154.686 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 155.575 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 155.575 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0be4fcf1-eb93-45c1-9bcb-ce994d3cdc95")
+		)
+		(pin "2"
+			(uuid "54f29f01-c24a-4584-a507-1eb293606a8b")
+		)
+		(instances
+			(project "TFG-Brushless-ESC"
+				(path "/fc8dd9a9-f99a-4338-8182-2c8b4b8ed6dd"
+					(reference "R66")
 					(unit 1)
 				)
 			)
@@ -13484,7 +13644,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 159.385 149.86 90)
+		(at 160.655 149.86 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13492,7 +13652,7 @@
 		(dnp no)
 		(uuid "4979e9f0-4bce-4ce8-87b9-75641eb66a3b")
 		(property "Reference" "R43"
-			(at 159.385 145.415 90)
+			(at 160.655 145.415 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13500,7 +13660,7 @@
 			)
 		)
 		(property "Value" "100R"
-			(at 159.385 147.32 90)
+			(at 160.655 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13508,7 +13668,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 159.639 148.844 90)
+			(at 160.909 148.844 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13517,7 +13677,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 159.385 149.86 0)
+			(at 160.655 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13526,7 +13686,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 159.385 149.86 0)
+			(at 160.655 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13535,7 +13695,7 @@
 			)
 		)
 		(property "Sim.Device" "R"
-			(at 159.385 149.86 0)
+			(at 160.655 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13544,7 +13704,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 159.385 149.86 0)
+			(at 160.655 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16458,7 +16618,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 170.815 154.94 0)
+		(at 172.085 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16466,7 +16626,7 @@
 		(dnp no)
 		(uuid "8e9a3879-8c3a-48cc-a723-bffeca6ea2d5")
 		(property "Reference" "#PWR0108"
-			(at 170.815 161.29 0)
+			(at 172.085 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16475,7 +16635,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 170.815 158.75 0)
+			(at 172.085 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16483,7 +16643,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 170.815 154.94 0)
+			(at 172.085 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16492,7 +16652,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.815 154.94 0)
+			(at 172.085 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16501,7 +16661,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 170.815 154.94 0)
+			(at 172.085 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17268,7 +17428,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:DMG3402L")
-		(at 168.275 149.86 0)
+		(at 169.545 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17277,7 +17437,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ea0d6c4-1d94-4a7e-a8b7-b5366888a61a")
 		(property "Reference" "Q7"
-			(at 173.99 148.5899 0)
+			(at 175.26 148.5899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17286,7 +17446,7 @@
 			)
 		)
 		(property "Value" "DMG3402L"
-			(at 173.99 151.1299 0)
+			(at 175.26 151.1299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17295,7 +17455,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 173.355 151.765 0)
+			(at 174.625 151.765 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17306,7 +17466,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.diodes.com/assets/Datasheets/DMG3402L.pdf"
-			(at 173.355 153.67 0)
+			(at 174.625 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17316,7 +17476,7 @@
 			)
 		)
 		(property "Description" "4A Id, 30V Vds, N-Channel MOSFET, SOT-23"
-			(at 168.275 149.86 0)
+			(at 169.545 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19547,7 +19707,7 @@
 	)
 	(symbol
 		(lib_id "Device:L")
-		(at 170.815 140.97 180)
+		(at 172.085 140.97 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19555,7 +19715,7 @@
 		(dnp no)
 		(uuid "df1ef3cf-feed-421a-900d-e82e3a59412b")
 		(property "Reference" "L2"
-			(at 172.085 139.7 0)
+			(at 173.355 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19564,7 +19724,7 @@
 			)
 		)
 		(property "Value" "30mm fan"
-			(at 172.085 141.605 0)
+			(at 173.355 141.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19573,7 +19733,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 170.815 140.97 0)
+			(at 172.085 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19582,7 +19742,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 170.815 140.97 0)
+			(at 172.085 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19591,7 +19751,7 @@
 			)
 		)
 		(property "Description" "Inductor"
-			(at 170.815 140.97 0)
+			(at 172.085 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)

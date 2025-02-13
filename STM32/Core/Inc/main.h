@@ -92,6 +92,8 @@ void Error_Handler(void);
 #define HALL_U_Pin GPIO_PIN_5
 #define HALL_U_GPIO_Port GPIOB
 #define HALL_U_EXTI_IRQn EXTI9_5_IRQn
+#define FAN_CTRL_Pin GPIO_PIN_7
+#define FAN_CTRL_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

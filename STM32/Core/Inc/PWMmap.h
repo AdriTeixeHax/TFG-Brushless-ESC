@@ -23,15 +23,14 @@ typedef struct
 
 PWMmap pwmMap[] =
 {
-    { HI_U, &htim2, TIM_CHANNEL_3 },
-    { LO_U, &htim3, TIM_CHANNEL_4 },
-    { HI_V, &htim3, TIM_CHANNEL_1 },
-    { LO_V, &htim2, TIM_CHANNEL_1 },
-    { HI_W, &htim4, TIM_CHANNEL_2 },
-    { LO_W, &htim4, TIM_CHANNEL_1 }
+    { HI_U, &htim1, TIM_CHANNEL_2 },
+    { LO_U, &htim1, TIM_CHANNEL_1 },
+    { HI_V, &htim3, TIM_CHANNEL_2 },
+    { LO_V, &htim3, TIM_CHANNEL_1 },
+    { HI_W, &htim2, TIM_CHANNEL_4 },
+    { LO_W, &htim2, TIM_CHANNEL_3 }
 };
 
-// Number of elements in the table
 #define PWM_MAP_SIZE (sizeof(pwmMap) / sizeof(PWMmap))
 
 int8_t PWMSet(MosfetPin pin, uint16_t value)
