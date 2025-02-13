@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "RTSpeed.h"
+#include "RTSpeed/RTSpeed.h"
+#include "RTSpeed/Analog.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

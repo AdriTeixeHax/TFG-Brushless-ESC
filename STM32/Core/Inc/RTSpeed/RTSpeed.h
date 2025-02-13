@@ -1,11 +1,7 @@
 #ifndef _RTSPEED__H_
 #define _RTSPEED__H_
 
-#include "PWMmap.h"
-
-uint8_t Hall_U_State = 0;
-uint8_t Hall_V_State = 0;
-uint8_t Hall_W_State = 0;
+#include <RTSpeed/PWM.h>
 
 uint8_t state = 0;
 
@@ -72,23 +68,23 @@ void updateState(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-  if(GPIO_Pin == GPIO_PIN_8)
+  if(GPIO_Pin == GPIO_PIN_5)
   {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_U_State = 1;
 	  else
 		  Hall_U_State = 0;
   }
-  else if(GPIO_Pin == GPIO_PIN_9)
+  else if(GPIO_Pin == GPIO_PIN_4)
   {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_V_State = 1;
 	  else
 		  Hall_V_State = 0;
   }
-  else if(GPIO_Pin == GPIO_PIN_10)
+  else if(GPIO_Pin == GPIO_PIN_3)
   {
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin) == GPIO_PIN_SET)
+	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_Pin) == GPIO_PIN_SET)
 		  Hall_W_State = 1;
 	  else
 		  Hall_W_State = 0;

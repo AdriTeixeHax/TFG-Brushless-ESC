@@ -1,5 +1,7 @@
-#ifndef _PWMMAP__H_
-#define _PWMMAP__H_
+#ifndef _PWM__H_
+#define _PWM__H_
+
+#include "Structs.h"
 
 #define RTSPEED_ERROR -1
 #define RTSPEED_OK     0
@@ -12,15 +14,6 @@ extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
 
-typedef enum {HI_U = 0, HI_V, HI_W, LO_U, LO_V, LO_W} MosfetPin;
-
-typedef struct
-{
-    MosfetPin 	       pin;
-    TIM_HandleTypeDef *htim;
-    uint8_t 		   channel;
-} PWMmap;
-
 PWMmap pwmMap[] =
 {
     { HI_U, &htim1, TIM_CHANNEL_2 },
@@ -30,8 +23,6 @@ PWMmap pwmMap[] =
     { HI_W, &htim2, TIM_CHANNEL_4 },
     { LO_W, &htim2, TIM_CHANNEL_3 }
 };
-
-#define PWM_MAP_SIZE (sizeof(pwmMap) / sizeof(PWMmap))
 
 int8_t PWMSet(MosfetPin pin, uint16_t value)
 {
