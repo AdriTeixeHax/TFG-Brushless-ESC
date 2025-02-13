@@ -9990,7 +9990,7 @@
 		)
 		(uuid e9a0c88b-cad8-4d2a-9cca-5346f3afc85a)
 	)
-	(text "Fan control"
+	(text "Control ventilador"
 		(exclude_from_sim no)
 		(at 149.86 130.81 0)
 		(effects
@@ -10012,7 +10012,7 @@
 		)
 		(uuid "1814e238-1ef4-4d2e-8eff-4acb4be28ae9")
 	)
-	(text "Boot & Reset\n"
+	(text "Boot y Reset\n"
 		(exclude_from_sim no)
 		(at 15.875 17.78 0)
 		(effects
@@ -10034,7 +10034,7 @@
 		)
 		(uuid "1fb69478-d929-482a-ab5d-ebcc410291d9")
 	)
-	(text "3.3V Regulator"
+	(text "Regulador de 3.3V"
 		(exclude_from_sim no)
 		(at 59.055 17.78 0)
 		(effects
@@ -10045,7 +10045,7 @@
 		)
 		(uuid "2dd4b963-61f5-403e-a321-302747551f51")
 	)
-	(text "STM32 Power filtering"
+	(text "Filtro alimentación STM32"
 		(exclude_from_sim no)
 		(at 232.41 17.78 0)
 		(effects
@@ -10056,7 +10056,7 @@
 		)
 		(uuid "5a5722fa-d4e7-4337-9ff3-7b75841622e7")
 	)
-	(text "Connector protections"
+	(text "Protección de conectores"
 		(exclude_from_sim no)
 		(at 46.99 171.45 0)
 		(effects
@@ -10078,7 +10078,7 @@
 		)
 		(uuid "87e3928b-4d43-4cb9-86d2-c94fcc35745b")
 	)
-	(text "Inverter and Hall sensors"
+	(text "Inversor y sensores Hall"
 		(exclude_from_sim no)
 		(at 200.66 56.515 0)
 		(effects
@@ -10100,7 +10100,7 @@
 		)
 		(uuid "c33d04ba-435d-46b3-81eb-f0cb717de2ec")
 	)
-	(text "USB CDC Port\n"
+	(text "Puerto USB CDC\n"
 		(exclude_from_sim no)
 		(at 149.86 73.025 0)
 		(effects
@@ -10111,7 +10111,7 @@
 		)
 		(uuid "c6affec9-ccf2-4f12-9905-0d688cf03ff8")
 	)
-	(text "Temperature sensors"
+	(text "Sensores de temperatura y ADC"
 		(exclude_from_sim no)
 		(at 200.66 110.49 0)
 		(effects
@@ -10122,7 +10122,7 @@
 		)
 		(uuid "cee0aab7-11cc-4e02-b817-9a28527249a3")
 	)
-	(text "12V Regulator"
+	(text "Regulador de 12V"
 		(exclude_from_sim no)
 		(at 137.16 17.78 0)
 		(effects
@@ -10133,7 +10133,7 @@
 		)
 		(uuid "de7f3e32-3fb9-4274-8779-84e95a37b83e")
 	)
-	(text "HSE & LSE"
+	(text "HSE y LSE"
 		(exclude_from_sim no)
 		(at 15.24 77.47 0)
 		(effects
