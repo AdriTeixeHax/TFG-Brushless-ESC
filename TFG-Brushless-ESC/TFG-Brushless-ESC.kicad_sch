@@ -6829,12 +6829,6 @@
 		(uuid "576954eb-ef17-4665-b44d-cb5b27e75af0")
 	)
 	(junction
-		(at 95.25 36.195)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6ba8d2a9-18cb-4848-b9d0-8716dab69976")
-	)
-	(junction
 		(at 34.29 90.805)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9522,16 +9516,6 @@
 	)
 	(wire
 		(pts
-			(xy 103.505 36.195) (xy 95.25 36.195)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5d3076e-fb17-4a44-b6ad-92441be8b9bc")
-	)
-	(wire
-		(pts
 			(xy 169.545 81.915) (xy 170.815 81.915)
 		)
 		(stroke
@@ -10067,9 +10051,9 @@
 		)
 		(uuid "60f2d4b2-7885-461f-a338-1ac1ef8e7b2e")
 	)
-	(text "- 1 capacitor per VDD pin.\n- Keep as close as possible\n  to the IC.\n- Maximum size: 0603"
+	(text "- 1 condensador por pin VDD.\n- Mantener lo más cerca posible del IC.\n- Tamaño máximo: 0603"
 		(exclude_from_sim no)
-		(at 243.205 29.21 0)
+		(at 237.49 26.035 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10155,9 +10139,9 @@
 		)
 		(uuid "e8a9ddb3-4325-4311-be06-6d493194df4a")
 	)
-	(text "Extra 220u\nelectrolytic if\nnot close to\n5V supply"
+	(text "Condensador\nelectrolítico\nextra de 220u\nsi el regulador\nno está próximo\nal raíl de 5V"
 		(exclude_from_sim no)
-		(at 74.295 40.005 0)
+		(at 74.295 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10696,7 +10680,7 @@
 		(uuid "b86d8082-efb7-4a2c-a5c6-848811f712b2")
 	)
 	(label "V_DIV_3"
-		(at 103.505 36.195 180)
+		(at 93.98 36.195 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -20315,7 +20299,7 @@
 	)
 	(symbol
 		(lib_id "Graphic:SYM_Arrow_Normal")
-		(at 74.295 31.115 90)
+		(at 74.295 30.48 90)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
@@ -20324,7 +20308,7 @@
 		(fields_autoplaced yes)
 		(uuid "e97c6a4f-9555-41a9-a15c-d036cd904773")
 		(property "Reference" "#SYM1"
-			(at 72.771 31.115 0)
+			(at 72.771 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20333,7 +20317,7 @@
 			)
 		)
 		(property "Value" "SYM_Arrow_Normal"
-			(at 75.565 30.861 0)
+			(at 75.565 30.226 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20342,7 +20326,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.295 31.115 0)
+			(at 74.295 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20351,7 +20335,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.295 31.115 0)
+			(at 74.295 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20360,7 +20344,7 @@
 			)
 		)
 		(property "Description" "Filled arrow, 200mil"
-			(at 74.295 31.115 0)
+			(at 74.295 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)

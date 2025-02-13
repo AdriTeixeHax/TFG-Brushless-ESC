@@ -3058,7 +3058,7 @@
 		)
 		(uuid "b6a4fc99-bbd8-4fa2-9d67-58e6555bd7ed")
 	)
-	(text "Shunt corriente"
+	(text "Shunt (medida)"
 		(exclude_from_sim no)
 		(at 154.305 108.585 0)
 		(effects
